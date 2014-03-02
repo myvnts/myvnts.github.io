@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Feb 02 - 模态测试哪种窗最合适 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Feb 02 - 模态测试哪种窗最合适"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Feb 02 - 模态测试哪种窗最合适</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-feb-02-tanxiangjun/">1月 9 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>对于不同类型的模态测试，哪种窗函数最合适？让我们来探讨一下……</strong></p>
+<p>这是个相当不错的问题，让我们回顾一下一些经常使用的激励技术和相关的窗函数。事实上，FFT变换包含一些限制条件，这是必须首先考虑的。这些条件有助于我们明白为什么要使用某种类型的激励技术和哪种形式的窗函数最合适。</p>
+<p>首先应记得傅立叶变换定义的时间区间为-∞到+∞。只要测量到整个瞬态信号或者捕捉到周期信号，那么FFT变换的要求是满足的。如果不满足FFT变换的要求，那么会引起严重的信号处理问题，称为泄漏。窗函数是加权函数，用于最小化泄漏造成的影响，但不能完全消除泄漏。因此有必要强调说明一下这个真实存在的问题。基于这些事实，让我们讨论实验模态测试不同类型的激励信号，并说明为这些激励信号所施加的典型窗函数。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb02/01.png" alt="图1 锤击激励和响应" /><p class="caption">图1 锤击激励和响应</p>
+</div>
+<a id="more"></a>
+
+<p>锤击法测试是模态测试非常常用的测试方法。它总是会引起一些类型的瞬态响应，而该响应为一系列指数衰减的正弦波的组合。这种情况下，如果能完全捕获到瞬态响应信号，因而满足FFT变换的要求，测量不存在泄漏。但是大多数结构，特别是小阻尼结构，指数衰减响应信号经常在采样时间内没有完全衰减。那么，这意味着不满足FFT变换的要求。这种情况下，通常为响应信号施加指数窗，从而，加窗后的信号可以更好地满足FFT变换要求。图1给出了锤击法测试的时域脉冲、原始的时域响应波形和加指数窗后的时域响应波形。</p>
+<p>加指数窗的响应能更好地满足FFT变换的要求。这时整个响应信号似乎都可以捕获到，但其实是以加窗为代价。减少指数窗应用的一个方法是调整测量带宽，从而考虑捕获更长的时域数据，或者增加样本总数，其直接效应就是获取更长的时域数据。无论如何，如果信号在采样周期的末端本质上没有衰减到零，那么必须加指数窗，以减少化泄漏所造成的影响。</p>
+<p>在许多数据采集系统中，也为力脉冲激励部分施加力窗。加力窗是为了消除可能来自于力锤激励通道的噪声。通常，设置力窗的宽度约为数据样本窗口的10%，使得力脉冲完全位于这个单位增益窗内，力窗之外的时域样本纪录则被加权置零。力窗不一定总是必须的，但是几乎所有的数据采集系统都有。需要着重注意的是，力窗从来不能消除测试过程中可能出现的二次连击的影响。使用力窗消除连击所造成的影响，将严重扭曲输入力谱。</p>
+<p>既然已经讨论过了锤击激励，现在让我们讨论用激振器进行实验模态测试时，所施加窗函数的考虑事项。最普遍的激励方式是随机激励。但随机激励的问题在于信号在采集周期内永远不具有重复性。因此，必须加窗，以减少泄漏。</p>
+<p>随机激励最常用的窗是汉宁窗。但是必须指出，不管使用何种窗函数，对测量数据都将有影响，但又必须加窗以减少泄漏，因此，加窗是个必然的麻烦。记住，加窗仅仅是减少泄漏，决不能消除。所有的窗函数对测量数据的幅值都有影响，使得测量到的幅值小于真实值，并且使得结构表现出来的阻尼比真实存在的要大。图2为由随机激励引起的典型输入-输出测量，并且对输入和响应通道施加了汉宁窗。汉宁窗的使用使得幅值失真了16%。当然，这时的失真比不加窗的泄漏造成的失真要少得多。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb02/02.png" alt="图2 典型的随机测量" /><p class="caption">图2 典型的随机测量</p>
+</div>
+<p>因为问题与泄漏和加窗使数据失真相关，因此开发了其他一些激励技术，特意用于消除泄漏和窗的使用。已开发的激励技术，包括伪随机、周期随机、猝发随机、正弦扫频和数字步进正弦等（所有这些激励技术将在以后某章节中加以讨论）。当今模态测试最常用的激励技术是猝发随机，故在这儿将讨论它。</p>
+<p>问题的本质是，除非捕获到整个瞬态信号或者捕获周期信号，不然总是存在泄漏。所有的激励技术都试图努力满足FFT变换的要求。如果满足要求，那么测量不存在泄漏，因而不需要加任何窗函数。在猝发随机激励方式中，施加在结构上的激励信号的开始和结束部分都位于采样周期内。这直接表明FFT变换的要求完全满足，信号不存在泄漏，不需要加窗函数。通常，习惯设置猝发信号长度为采样长度的50%~80%，也可以由用户指定。虽然猝发激励信号不存在泄漏，但是必须为响应通道考虑其他一些注意事项。</p>
+<p>当激振器停止激励时，结构的响应并不会同时停止。激振器停止激励后，结构的响应通常按指数衰减（事实上，当激振器停止激励后，还有一些激励力存在激励通道中，这部分输入也应该作为输入力的一部分）。图3为一个猝发随机信号典型的输入-输出。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb02/03.png" alt="图3 典型的猝发随机测量" /><p class="caption">图3 典型的猝发随机测量</p>
+</div>
+<p>只要测量的响应在采样周期末端基本上衰减到零，那么整个信号都能捕捉到，因而不需要加窗函数。然而，如果情况不是这样，那么需要作出相应的调整。为了捕捉到整个瞬态信号，那么，可以缩短猝发激励的时间，或者调节带宽以便提供更长时间的数据，或者提高分辨率，本质上是延长采样时间。所有这些措施通常有助于确保整个结构响应在采样周期内完全捕获到。通常，不需要为这类猝发随机加窗函数。猝发随机的真实目的是消除任何窗函数的使用。那么猝发随机将提供无泄漏的测量，满足FFT变换的周期性要求。</p>
+<p>现在，我希望你明白，哪种窗最适合实验模态测试中最常用的激励方式（其他激励方式将在以后某章节中加以讨论）。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态测试/">模态测试</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-aug-02-tanxiangjun/" class="alignleft prev" title="Aug 02 - MIMO测试的优势">上一篇：Aug 02 - MIMO测试的优势</a>
+ 
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-dec-02-tanxiangjun/" class="alignright next" title="Dec 02 - 模态测试采集平均FRF vs 采集时域数据">下一篇：Dec 02 - 模态测试采集平均FRF vs 采集时域数据</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

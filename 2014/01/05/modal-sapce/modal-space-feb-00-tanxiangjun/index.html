@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Feb 00 - 由模态振型能否反映出结构设计是否合理 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Feb 00 - 由模态振型能否反映出结构设计是否合理"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Feb 00 - 由模态振型能否反映出结构设计是否合理</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-04T16:00:00.000Z"><a href="/2014/01/05/modal-sapce/modal-space-feb-00-tanxiangjun/">1月 5 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>向他人展示模态振型，他们问我结构设计是否合理。我该怎样回答他们？</strong></p>
+<p>如果每次解释这个问题，我就能得到一美元，那么我就非常富有了。基本回答是：回答这个问题，仅有模态振型，信息是不足够的。问这个问题的人，他们自己也不清楚到底想问什么，你不得不非常圆滑地告诉他们，只有无知的人才会问这样的问题。</p>
+<p>他们喜欢问这个问题的理由之一是因为你可能给他们展示了振型动画，此时他们的印象是结构正在发生变形（因为他们从计算机屏幕上看到了结构正在发生变形）。当然，你知道那只是结构在受外力作用下激起了结构特有的模态振型。有时我说，“让我们增加振型动画的幅度，看能否在计算机屏幕上破坏该结构“（当然，这是非常可笑的！这是不可能发生的）。我使用这种表述是为了解释什么是振型。振型动画只是一种显示机制，让人理解如果结构受外力作用激起了某阶模态，该阶模态下结构可能发生怎样的变形。</p>
+<p>关键因素之一就是我们需要知道这个外力。出于某些原因，人们忽略了我们需要施加一个力作用在系统上，以便得到响应。系统的物理运动方程为</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\mathbf{M}\end{bmatrix}\begin{Bmatrix}\ddot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{C}\end{bmatrix}\begin{Bmatrix}\dot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{K}\end{bmatrix}\begin{Bmatrix}\mathbf{x}\end{Bmatrix}=\begin{Bmatrix}\mathbf{F(t)}\end{Bmatrix}
+$$</span><br /></p>
+<a id="more"></a>
+
+<p>模态空间等价为</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\backslash     &amp; \\\  &amp;  \overline{\mathbf{M}}  &amp; \\\  &amp;  &amp;  \backslash \end{bmatrix}\begin{Bmatrix}\mathbf{\ddot{p}}\end{Bmatrix}+\begin{bmatrix}\backslash     &amp; \\\  &amp;  \overline{\mathbf{C}}  &amp; \\\  &amp;  &amp;  \backslash \end{bmatrix}\begin{Bmatrix}\mathbf{\dot{p}}\end{Bmatrix}+\begin{bmatrix}\backslash     &amp; \\\  &amp;  \overline{\mathbf{K}}  &amp; \\\  &amp;  &amp;  \backslash \end{bmatrix}\begin{Bmatrix}\mathbf{p}\end{Bmatrix}=\begin{bmatrix}\mathbf{U}\end{bmatrix}^{\mathbf{T}}\begin{Bmatrix}\mathbf{F}\end{Bmatrix}
+$$</span><br /></p>
+<p>注意在方程的右边有作用的外力。当求解系统的特征方程时，我们假设方程右边没有外力。这个过程表明我们是怎样得到系统动力学特性的。考虑系统动态特性方法之一是模态分析，而系统的模态恰恰是一组经过精心挑选的滤波器，在一些频率成分处对输入信号有放大和削弱的能力。如果仅仅考虑滤波器本身，对于某一特定的应用，就滤波器是否合适，我们能作出评判吗？当然不能！我们可以说的是滤波器本身具有的一些特性，这些特性与中心频率、衰减和增益设置有关，如图1所示。</p>
+<p>一个结构的动力特性是完全相同的，我们能够确定每阶模态（每个滤波器）的固有频率（中心频率）、阻尼（衰减）和留数/模态振型（增益）。我们需要清楚地明白一点：模态振型只是结构的一个特征，我们不能确定某阶模态是好还是差，除非我们知道力函数，也就是方程右边项。</p>
+<p>作为另一个例子，我们想确定一根悬臂梁的刚度。我们可以走进实验室，在悬臂梁的自由端作用一个力，然后测量由此力引起的位移。因而可以确定梁的刚度，形如K=F/X。刚度是梁的一个非常重要的参数或特征。但是一旦确定了刚度，我能知道此梁是否失效吗？当然不能！我需要知道实际作用在梁上的力的大小，难道不是这样吗？你要知道，在实验室里测试，为了确定梁的刚度特性，我们作用了一个任意大小的力，然后测量由此力引起的位移。在计算真实位移之前，需要知道实际作用力的大小。然后我需要一些已经明确定义的规范，该规范用于说明怎样评价结构在设计荷载或实际外力作用下的承载能力。当然这又是另一个重要方面了。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb00/01.png" alt="图1" /><p class="caption">图1</p>
+</div>
+<p>人们经常忽略的事情是，一旦得到模态振型和指定动力学设计荷载后，是可以计算响应的，但是需要确定一个规范，用于定义该响应是否可接受。有时，这可能是结构动力响应建模过程中最让人感受挫败的部分之一。响应可以计算，但是没有人能明确定义结构响应的可接受级别。很多时候在提取形象的振型动画过程中，这是容易被忽略的重要细节。然后每个人都会问……多大的变形是可接受的，部件的寿命多长，总体“感觉”是否良好，响应是否太嘈杂等等问题。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb00/02.png" alt="图2" /><p class="caption">图2</p>
+</div>
+<p>现在我们已经讨论了几个方面，让我们返回到以前讨论过的平板例子，以前关心的是模态分析过程中不同的方面。图2为一个典型的强迫振动问题示意图，其中作用力是时域形式。时域信号非常令人迷惑，通过FFT变换，将时域信号变换到频域有助于我们确定这个力的一些重要特征。力函数乘以频响函数得到系统输出响应，如果想要的话，响应也可以转换到时域。这儿最重要的一点是FRF乘以力谱得到系统响应。这意味着通过这个乘法运算，力谱被放大或削弱了。FRF通过频率成分控制力谱怎样被放大或削弱。在上图中，FRF似乎对图示的前四阶模态都有贡献。那是假设外力作用点和响应位置是系统前四阶模态中每一阶的参与者。</p>
+<p>但是如果外力作用位置是某阶模态的节点，结果会怎样？现在假设外力作用在沿平板长度方向的对称线上，那么作用在该位置上的外力将不能激起任何扭转模态，因而，我们可以说这些模态不参与此作用力引起的结构响应。对于响应位置，也有相同的结论。因此我们能明白输入位置和输出位置两者对系统响应都有影响（事实上，模态振型幅值对多少模态参与系统总响应有严重影响）。</p>
+<p>虽然我们可以说某些模态可能不参与系统响应，但并不意味着这些模态不存在，它们只是不参与系统响应计算而已。但这些模态仍然是存在的，它们也定义系统的动力学特性。依赖外力的作用位置和响应的测量位置（同样也是信号的频率成分），将决定结构怎样响应。一些模态在系统响应中可能占主要地位，而其他一些可能占次要地位，这依赖于选择的特定输入-输出位置。但是所有的模态都是存在的，它们只是可能没有被激起。</p>
+<p>我们需要记住的是模态测试仅仅是确定系统的动态特性。我们同时测量一个任意力和由该力引起的系统响应，这就使得我们可以确定系统的动态特性：频率、阻尼和模态振型。这些是系统的唯一特性。我们显示模态振型（以动画的形式）是为了更好的理解结构在外力作用下可能发生的变形，该力可能激起系统的一阶或多阶模态。记住，模态分析时在运动方程右边不考虑外力这一项，模态振型是不依赖外力的。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/振型/">振型</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/05/modal-sapce/modal-space-jun-00-tanxiangjun/" class="alignleft prev" title="Jun 00 - 测点数目多少足够">上一篇：Jun 00 - 测点数目多少足够</a>
+ 
+ 
+	<a href="/2014/01/03/modal-sapce/modal-space-dec-99-tanxiangjun/" class="alignright next" title="Dec 99 - 怎样理解模态分析相关概念，如拉氏变换、傅立叶变换、FRF等">下一篇：Dec 99 - 怎样理解模态分析相关概念，如拉氏变换、傅立叶变换、FRF等</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

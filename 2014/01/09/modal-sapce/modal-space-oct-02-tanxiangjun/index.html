@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Oct 02 - 模态测试容易犯的主要错误 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Oct 02 - 模态测试容易犯的主要错误"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Oct 02 - 模态测试容易犯的主要错误</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-oct-02-tanxiangjun/">1月 9 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>模态测试容易犯的主要错误是什么，这样我就可以避免犯同样的错误了？</strong> <strong>让我们来探讨一下……</strong></p>
+<p>在模态测试和分析过程中，人们经常犯一些严重的错误，多年来我见到许多这样的例子。一些错误相当有趣，一些又非常严重。因此让我们来探讨一些我称之为“模态测试趣闻”的错误。在过去几十年的模态测试中，我已碰到过很多这样的“趣闻”。</p>
+<p>锤击法测试和相干：多年前（刚好几个月前又碰到），我见到模态测试工程师仅仅对每个测量位置平均一次（也就是每个测点仅锤击一次）。当问他为什么这样做时，他非常肯定的回答说，既然相干为1，为什么还要不厌其烦地进行多次锤击测量，锤击一次得到的相干多好呀！我见过很多人中过这个圈套。相干是一个只能通过多次平均测量估算的函数，只进行一次平均（锤击），相对于进行的测量而言相干函数没有任何变化，因此，相干函数值总是1。这样明显不能成为测量是可接受的标识。你只能使用相干函数去估算一组平均后的数据的变化。多次平均是必须的。</p>
+<a id="more"></a>
+
+<p>参考点位于某阶模态节点处：模态测试参考点位置（移动力锤测试中的固定不动的响应测点和锤击或激振器测试中的固定不动的输入位置）必须不能位于某阶模态的节点位置。节点位置是响应为零的位置。如果参考点位置没有响应，那么怎么可能得到理想的FRF。记得多年前，一组人对一个大型的悬臂类结构进行模态测试，采用非常昂贵的低频加速度计。注意到测试设备有可能从结构上掉下来，因此，他们将参考加速度计安装在悬臂结构的底部，当然这地方没有响应可供测量，因此FRF非常差。另一次对一个加筋面板组成的橱式结构进行模态测试，所有的测点都位于刚性加强筋的十字交接位置，没有一个加速度计安装在结构面板上。对于这个特定的结构，感兴趣的模态主要跟面板的响应有关。而所有的加速度计测量位置基本上位于所有模态的节点位置。不幸的是，在寻求指导和帮助之前，一些人已这样工作了好几个月，获得了多组无用的数据。因此，参考测点必须位于有响应可测量的位置，并且要求响应较显著，避开模态节点。</p>
+<p>质量荷载的影响：在前面一些章节中已经讨论过质量荷载的影响。测试仪器的质量会影响FRF，并给出有误差的系统固有频率。必须多次测试，以确定质量荷载的影响是否存在，有多大影响。这个影响可能较显著或者相对可忽略。我曾经做过一次质量荷载的试验，并且很难消除质量荷载的影响。上世纪80年代早期，我潜心致力于潜水艇推进系统的绝缘部件的阻抗测试。新的设计正在评估，阻抗测试也正在进行，测试频率范围超过5KHz，采用新技术，那时称为数字步进正弦方法，每次测试需要近3个小时。每个工况需要测量多次，需要估算多个原型，而测量仪器只是一个两通道的分析仪，按进度安排完成全部测试需要全天不间断地进行测试。测试工况包括一组用气囊支承的2吨重的水泥块体，块体用绝缘系统相隔离。有一个学生（高约6.5英尺，重约350磅）帮忙参与测试，负责第三班（每天三班）的测试。三个月后，项目结束，分析人员分析数据发现，其中一些数据有问题，这些数据在质量方面，与其他数据相比似乎有400磅的差异，导致频率产生了偏差。他们的结论让我不寒而栗，因为我记得每天早上来到车间的装配区域，而这地方正是测试现场，记得看到水泥块体上有一个枕头和毛毯。经过一番长久的探讨之后，确定原来是一旦测试开始后，负责操作的学生就爬到气囊支承的水泥块体上小睡一会，而此时测试正在进行中。因此，你能想象，解释这个特殊的测试问题多么困难。所有的测试都有详细的纪录日志，这样就很容易确定哪些测试由谁负责完成的，因此检查测量数据，就能确定使用的数据哪些是不合适的。没人喜欢一直详细纪录测试日志，但在这种情况下测试日志提供的信息就非常宝贵了。我不认为每人都能轻易地消除质量荷载的影响。因此，请密切注意质量荷载！</p>
+<p>连击和力窗：很多时候，锤击法测试时，连击是不可避免的。我多次见到测试工程师使用力窗移除二次连击中第二个力脉冲。他们的处理思路是，既然我明确不希望发生二次连击，为什么不将不想要的第二次锤击置零。初想起来，这似乎是合理的，但现实情况是结构已经受到了二次连击作用。因此，通过加力窗试图从分析角度上消除第二次锤击的影响是完全不正确的。实际上结构对二次连击已经产生了响应，绝不可能通过加力窗就能消除二次连击的影响。</p>
+<p>每次平均使用不同的测点：这一点，你完全不用怀疑，真的有人这么干。多年前，我亲眼见证过一次这样的锤击测试。测试的结构相当简单，但是得出来的所有模态振型完全杂乱无章。检查一些易出错的方面以后，进行了长时间的讨论，确定为什么在25次平均以后，这样简单的结构的相干还是如此的差。结构上共有25个测点，测试工程师为每个测点进行了25次平均。不幸的是，每个测点的测量数据都是由25次测量数据之和组成，而这25次测量数据是锤击了结构上每一个测点得到的，即每个测点锤击一次。实质上每个FRF都平均了25次，而这25次平均是锤击结构上全部25个测点的平均。这样一个平均的FRF标识为结构上一个测点的FRF。这个过程重复了25次，直到所有的测点测量完毕为止。显然，这是完全错误的。结构上一个给定测点的平均FRF的数据必须来自对该测点多次锤击的平均。我实在不相信有人会那样做。</p>
+<p>坐标系和测点方位信息：合理确定模态测试的测点和测点方位是一个相当简单的过程，但是，有时也会因这些信息不正确而产生错误。一个简单有效的预防方法是在测试对象上清楚地标明坐标系统。我经常用胶带在地板上清楚地标明x、y和z方向。很多人在背后嘲笑我这种做法，但我从来没有搞错模态测试中测点的方位信息，而其他人却经常弄错。因此，我相信“谁笑到最后，谁才笑得最甜”，现在我还嘲笑我见过的这些错误。记得一次测试安装系统上的发动机组，测试主要是确定安装系统上机组的刚体模态，这些刚体模态频率通常都很低。一天我接到了一个电话，说发动机组的模态测试结果表明10Hz内机组有一阶弹性模态。这是极不可能的，我怀疑所有测点位置的测点和方位是否确定正确。测试人员非常武断地告诉我，说他们都是经验丰富的模态测试工程师，清楚地知道怎样确定这些基本信息。不想再去激怒他们，我要求检查测试数据。经过仔细检查他们的数据，问题就清楚了，原来他们将发动机组一个面上所有X方向的传感器都反向了180度（基本上，他们都指向了反方向，因为这是在模态分析软件中指定的）。一旦更正了这些测点的方位，发动机组的刚体模态就如预料的一样出现了。测点和方位信息是相当简单直观的，正确确定这些信息是结构几何生成中重要的一步。</p>
+<p>有限元模态不总是正确：许多人都听到过这样的话：“人人都相信测试结果，除了测试工程师；没有人相信分析模型的结果，除了分析者”。十年前测试一个大型人造卫星结构，为了准确确定激振器的激励位置，使用有限元模型进行了详细的预测试分析。分析模型确定一些激振器沿长悬臂结构长度方向分布，结构安装在巨大的质量块体上，但是两个水平激振器安装在一方向，垂直于悬臂结构的长度方向。当怀疑忽略了另一个水平方向的激励时，分析者坚定地回答，在另一个水平方向没有必要安装激振器，因为测试之前进行了精心的分析，表明选择的激励方向已明确激起了结构所有模态。但是这个分析模型不完全正确（实际上在分析模型中错误地定义和分布了许多集中质量单位）。因此，预测试分析得到的结果是有偏差的，因为有限单元模态存在错误，这样就提供了错误的信息。参考点位置的选择不是一项容易的工作。有限元模型，如果正确的话，是帮助确定参考点位置的有效工具。但是不能过于相信未经检验的有限元分析模型（实际上测试就是校验有限元模型）。</p>
+<p>基本要求：几乎任何模态测试的基本要求就是需要你仔细思考测量过程中的每个步骤，以确保得到正确的FRF。最糟糕的情况就是测试人员不思考他们将要做什么。当我走进实验室看到正在进行的测试，而测试人员却没有理解正在测试什么时，我感到非常难过。很多时候相关人员总是这样回答：“我们总是这样做的，它肯定是正确的，因为我们这样做已经很多年了”。按照一组已定的程序进行测量没有错，但是需要强调的是每位测试人员都应该理解用于获得FRF数据的测试方法背后的逻辑性和理由。首先，总是要做的是质疑假设，以确保每个人都明白为什么按这种方式行事。其次，就是我常说的思想不是任意的！模态测试不是一门简单的按键选择技术，不是一门按键选择在汉堡包中加碎牛肉，炸薯条还是色拉的技术。在过去25年里，模态测试已走了很长一段路，到目前为止，它仍然不是一个全自动化的过程。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态测试/">模态测试</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-apr-02-tanxiangjun/" class="alignleft prev" title="Apr 02 - 实模态与复模态的区别">上一篇：Apr 02 - 实模态与复模态的区别</a>
+ 
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-jun-02-tanxiangjun/" class="alignright next" title="Jun 02 - 数据采集的基本步骤">下一篇：Jun 02 - 数据采集的基本步骤</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Dec 03 - 局部拟合和整体拟合有何不同之处 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Dec 03 - 局部拟合和整体拟合有何不同之处"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Dec 03 - 局部拟合和整体拟合有何不同之处</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-11T16:00:00.000Z"><a href="/2014/01/12/modal-sapce/modal-space-dec-03-tanxiangjun/">1月 12 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>局部拟合和整体拟合有何不同之处？</strong> <strong>让我们来探讨一下……</strong></p>
+<p>这是个相当不错的问题，为了说明这个问题，需要涉及到少数几个核心方程和一个简单实例，用于说明它们之间的区别。让我们回想一下频响函数</p>
+<p><br /><span class="math">$$
+\mathbf{h\_{ij}}(\mathbf{j\omega)}\sum\_{k=1}^{m}\left ( \mathbf{\frac{a\_{ijk}}{j\omega\_k -p\_{k}}} +\mathbf{\frac{a^\*\_{ijk}}{j\omega\_k -p^\* \_{k}}}\right )
+$$</span><br /></p>
+<a id="more"></a>
+
+<p>这有无数个“ij”（输出-输入）组合，用一个可能的FRF矩阵加以说明，如图1所示。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec03/01.png" alt="图1 多自由度系统的FRF矩阵" /><p class="caption">图1 多自由度系统的FRF矩阵</p>
+</div>
+<p>每个FRF由极点和留数定义，由一个测点到下一个测点测量得到的FRF是不同的，因为留数不同。这是正确的，因为模态振型与留数的关系通过下式发生联系</p>
+<p><br /><span class="math">$$
+\mathbf{a\_{ijk}=a\_k u\_{ik} u\_{jk}}
+$$</span><br /></p>
+<p>但是需要着重注意，FRF的分母是个常数，测量不同测点时不会改变。因为系统极点不随每个测量位置的改变而改变，那么这说明系统极点是系统的一个“全局”特性。这也意味着从一次测量到下一次测量，留数会发生改变，如预期一样，但是极点不会改变，至少理论上是成立的。但是在现实测量中，可能不一定是这样的。现实测量时系统极点可能会移动，这会出现问题。</p>
+<p>为了理解这一点，考虑用直线进行数据拟合，如图2所示。如果选择不同的两组数据：一组两个点（蓝色）与另一组两个点（红色），两组数据计算出来的斜率和y方向的截距明显不同。换句话说，斜率和y方向的截距都有差异，这依赖于使用哪些数据提取参数。使用最小二乘法拟合所有的数据是斜率和y方向截距的“最优”估计。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec03/02.png" alt="图2 说明参数的变化" /><p class="caption">图2 说明参数的变化</p>
+</div>
+<p>如果独立估计每个FRF，那么由测量得到的FRF提取模态参数时也存在与上面相同的影响。依赖于使用的FRF，估计的极点可能存在差别，虽然理论上表明这是不会发生的。然而，用实测的FRF提取模态参数，且彼此单独考虑每个FRF时，那么的确会出现极点发生移动的情况。这个过程称为“局部”拟合。围绕这个问题，同时使用所有的FRF作为一组数据，采用最小二乘法找到最佳极点，描述极点的“整体”表达。一旦估计出系统极点，接下来在模态参数估计方程中使用极点的“整体”估计去估算留数。这个过程共有两个步骤，首先估计系统的“全局”极点，接下来通过先前估计的系统“全局”极点锁定一个固定的留数值，不管每个FRF可能指示什么值。这就是“整体”拟合。</p>
+<p>为了说明局部拟合和整体拟合的不同之处，使用一个简单的平面框架结构的FRF加以说明。图3为这个结构的一些FRF。在显示的带宽内有五阶截然不同的模态。注意到最上面两个FRF图显示出了框架五阶模态的峰值，但是下面两个FRF图并没有全部显示出五个峰值（这是因为一些测量位于一些模态的节点上）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec03/03.png" alt="图3 平板结构的一些FRF" /><p class="caption">图3 平板结构的一些FRF</p>
+</div>
+<p>如果在某条FRF曲线中没有峰值，那么怎么估计系统极点？这将会引起严重的问题，特别是采用局部拟合的时候。如果对这类数据采用局部拟合，对每个FRF采用局部拟合，那么提取得到的模态参数将包含较差的提取值，这是因为极点估计较差。使用局部拟合技术估计平面框架结构的模态参数，模态振型如图4所示。注意到模态振型中的一些位置，似乎数据不连续，与预期的模态振型不同。这时的模态振型是扭曲的。原来是这些位置是结构模态的节点位置（这是局部拟合的常见问题）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec03/04.png" alt="图4 局部拟合得到扭曲的振型" /><p class="caption">图4 局部拟合得到扭曲的振型</p>
+</div>
+<p>对同一组FRF数据采用整体拟合。首先估计系统最合适的全局极点，然后第二步用全局极点估计留数。图5为该方法得出的模态振型。注意到此时平面框架结构的这些模态振型才是预期想得到的模态振型。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec03/05.png" alt="图5 整体拟合得到正确的振型" /><p class="caption">图5 整体拟合得到正确的振型</p>
+</div>
+<p>这个实例清楚地表明整体拟合产生更优的结果。然而，当采集数据时，必须不断的试验，以确保数据满足整体拟合的条件：在所有测量得到的FRF中，模态必须是整体模态。如果数据不连续，那么在参数估计过程中可能产生错误。需要不断的试验以保证采集到的FRF数据满足全局特性。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/曲线拟合/">曲线拟合</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/02/16/web-resources/web-resources/" class="alignleft prev" title="学习资源">上一篇：学习资源</a>
+ 
+ 
+	<a href="/2014/01/12/modal-sapce/modal-space-apr-03-tanxiangjun/" class="alignright next" title="Apr 03 - 真的有必要拒绝连击吗">下一篇：Apr 03 - 真的有必要拒绝连击吗</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

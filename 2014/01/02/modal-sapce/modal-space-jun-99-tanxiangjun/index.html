@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Jun 99 - ODS和模态振型之间的区别？ | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Jun 99 - ODS和模态振型之间的区别？"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Jun 99 - ODS和模态振型之间的区别？</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-jun-99-tanxiangjun/">1月 2 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>工作变形分析（ODS）和模态振型二者之间有什么不同？有时他们看起来一样。</strong> <strong>好……让我来描述它们之间的差异……</strong></p>
+<p>对大多数人来说，这是一个通常使人迷惑的方面。部分原因是由于我们使用的术语所引起的，我更宁愿称工作状态下得到的数据为工作变形模式，不愿意使用振型（工作变形分析，也称为工作变形振型）一词。但是不幸的是，我不能改变这个名词术语。</p>
+<p>首先，回想一下结构是怎么响应的，通常由激励引起</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun99/001.jpg" />
+</div>
+<p>当然，我们知道实际施加在结构上的输入力函数是时域形式，但是可以用频域形式来表示。同样，结构的响应实际也是时域的形式，但我们也可以将其表示成频域形式。</p>
+<p>对一个受到任意输入激励的结构，其响应可以通过频响函数乘以输入力函数计算得到，简单示意过程，如图1所示。</p>
+<a id="more"></a>
+
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun99/01.jpg" alt="图1 输入-输出结构响应问题的示意性概述" /><p class="caption">图1 输入-输出结构响应问题的示意性概述</p>
+</div>
+<p>图中给出的激励是能激起结构所有频率的随机激励，最重要的是频响函数对激起一些响应的输入力函数起到了过滤作用。图示的激励激起了结构的所有模态，因此，响应通常是输入力激起的所有模态的线性叠加。如果激励不包含所有频率，只能激励某一个特定的频率（在工作状态下，该频率通常是我们关心的频率），那么结果将会怎样。</p>
+<p>考虑受正弦激励的平板，假设激励点位置为平板的一个角点。作为示例，我们仅考虑平板的响应，假设该正弦激励仅激起了平板前两阶模态（当然平板的模态有很多阶，为了简单起见，我们假设只激起了前两阶）。从图1和方程1可以知道，确定结构响应的关键是输入和输出位置的FRF。同样，需要记得的是在采集工作数据时，我们不测量系统的输入力和FRF，仅仅测量系统的响应。</p>
+<p>首先，让我们刚好在平板的第1阶固有频率处，以正弦方式激励该系统，图2为系统响应中的一条FRF曲线。因此，即使仅使用单一频率对系统进行激励，FRF对结构将怎么响应还是起了过滤作用。可以看出，FRF是由1阶和2阶模态的贡献组成。同时也可以看出系统的主要响应，不管是在时域还是频域，都是1阶模态占主导。如果仅在那个频率处测量多个测点位置处的响应，那么工作变形模式看起来将非常像1阶模态振型，但是这儿有少量2阶模态的贡献。对于工作数据，我们从不测量输入力或者FRF，仅仅测量输出响应。因此测量得到的这些变形是由输入激励所激起的结构的真实响应，不管输入激励是何种激励。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun99/02.jpg" alt="图2 激励靠近1阶模态" /><p class="caption">图2 激励靠近1阶模态</p>
+</div>
+<p>当我们测量RFR和进行模态参数估计时，实际上是确定单独1阶模态，图中的蓝色表示，和单独2阶模态，图中红色表示，以及系统的其他阶模态独自对总FRF的贡献。对于工作数据，我们仅仅是考虑结构在某一特定频率处的响应，该响应为所有模态对系统总响应的线性组合。所以，现在我们能明白工作状态下的平板变形模式非常像第1阶模态振型，如果主要激励1阶模态。</p>
+<p>现在让我们刚好在平板的第2阶固有频率处激励该系统。图3表明了与刚讨论的1阶模态相同的信息。但是我们要明白，现在主要是激励系统的第2阶模态，再次，必须认识到响应看起来非常像2阶模态振型，但是这儿有少量1阶模态的贡献。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun99/03.jpg" alt="图3激励靠近2阶模态" /><p class="caption">图3激励靠近2阶模态</p>
+</div>
+<p>当远离共振频率激励系统时，将会发生什么呢？让我们在1阶与2阶频率中间激励该系统。现在从这可以看出模态数据和工作数据之间的真实差异。图4给出了结构的变形形状。初看起来，变形形状似乎不像以前我们认识的任何模态振型。但是如果观察时间足够长久，就会发现变形竟然含有部分第1阶弯曲变形和部分第1阶扭转变形。所以工作数据主要是1阶和2阶模态振型的某种组合（是的，这儿实际上还有其他阶在里面，但是1阶和2阶模态是系统响应的主要参与者）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun99/04.jpg" alt="图4 激励位于1阶和2阶之间" /><p class="caption">图4 激励位于1阶和2阶之间</p>
+</div>
+<p>现在，通过模态基础知识理解了FRF对某阶模态的贡献，我们已经讨论了这一点。当我们实际采集工作数据时，不测量FRF，仅测量到了系统的输出谱。如果仅考虑这些输出谱，可能对于解释为什么工作数据看起非常像模态振型，还是不够清楚。图5给出了在平板某一位置测量得到的输出谱。施加在结构上的输入是宽频激励，能激起多阶模态。但是，通过理解每一阶模态对工作数据有怎样的贡献，明白所有模态对系统总响应的贡献就相当容易了。因此，实际上，工作变形与模态振型之间有很大的差别：工作变形模式是模态振型以某种线性方式的组合。我希望这能帮助你消除工作变形模式与模态振型二者之间不同之处的疑问。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun99/04.jpg" alt="图5 宽频激励平板" /><p class="caption">图5 宽频激励平板</p>
+</div>
+<p>回想一下，如果你还有更多模态分析方面的问题，请咨询我。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/振型/">振型</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/02/modal-sapce/modal-space-feb-99-tanxiangjun/" class="alignleft prev" title="Feb 99 - 各种不同的拟合技术有何意义？">上一篇：Feb 99 - 各种不同的拟合技术有何意义？</a>
+ 
+ 
+	<a href="/2014/01/02/modal-sapce/modal-space-apr-99-tanxiangjun/" class="alignright next" title="Apr 99 - 怎样由FRF得到模态振型？">下一篇：Apr 99 - 怎样由FRF得到模态振型？</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

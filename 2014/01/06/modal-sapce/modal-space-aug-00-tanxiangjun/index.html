@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Aug 00 - 结构动力学修改是否起作用 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Aug 00 - 结构动力学修改是否起作用"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Aug 00 - 结构动力学修改是否起作用</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-05T16:00:00.000Z"><a href="/2014/01/06/modal-sapce/modal-space-aug-00-tanxiangjun/">1月 6 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>有人告诉我说结构动力学修改（SDM）不起作用，因为得不到系统所有的模态。</strong> <strong>好，让我们谈谈这个方面……</strong></p>
+<p>结构动力学修改（SDM）成为一个受欢迎的工具是在上世纪80年代早期。由于对SDM技术上的一些误解，导致得出了一些错误的结论。但是假设在正确的情况下，SDM是个功能强大的工具，能够帮助设计工程师们做出高水平的设计方案。首先，让我们简要地回忆一下SDM技术，并表明这些技术对模态重大问题――模态截断，是如何感知的。</p>
+<p>SDM是一个分析工具，主要是用模态数据（分析数据或实验数据）去估计系统的动态特性如何随系统的质量、阻尼和刚度这些基本量发生变化而变化。注意仅仅是用模态数据（频率、阻尼和模态振型）预测动态特性的改变，原始的FEM数据或者测试数据不需要做任何修改。然而，一旦进行了结构动力学修改，强烈建议再次分析修改后的FEM或者再次测试修改后的被测对象。</p>
+<p>对系统物理方程求解，获得特征值，由分析模型或者实测数据获得模态表达式。物理系统在模态空间的模态表达形式假设为</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\setminus &amp;  &amp; \\\  &amp; \overline{\mathbf{M}} &amp; \\\  &amp;  &amp; \setminus \end{bmatrix} \left \\{ \mathbf{\ddot{p}} \right \\}+\begin{bmatrix}\setminus &amp;  &amp; \\\  &amp; \overline{\mathbf{C}} &amp; \\\  &amp;  &amp; \setminus \end{bmatrix}\left \\{ \mathbf{\dot{p}} \right \\}+\begin{bmatrix}\setminus &amp;  &amp; \\\  &amp; \overline{\mathbf{K}} &amp; \\\  &amp;  &amp; \setminus \end{bmatrix}\left \\{ \mathbf{p} \right \\}=\left [ \mathbf{U} \right ]^\mathrm{T}\left \\{ \mathbf{F} \right \\}
+$$</span><br /></p>
+<a id="more"></a>
+
+<p>现在改变物理系统的质量ΔM、阻尼ΔC和刚度ΔK，在模态空间的表示为（通过模态转换方程）</p>
+<p><br /><span class="math">$$
+[\Delta \overline{\mathbf{M}}]=[\mathbf{U}]^\mathbf{T}[\Delta \mathbf{M}][\mathbf{U}];[\Delta \overline{\mathbf{C}}]=[\mathbf{U}]^\mathbf{T}[\Delta \mathbf{C}][\mathbf{U}];[\Delta \overline{\mathbf{K}}]=[\mathbf{U}]^\mathbf{T}[\Delta \mathbf{K}][\mathbf{U}]
+$$</span><br /></p>
+<p>假设系统为比例阻尼系统，由修改后的系统获得特征值。求解过程中最重要的一部分是通过下式计算系统的最终物理模态</p>
+<p><br /><span class="math">[<strong>U</strong>_2] = [<strong>U</strong>_12][<strong>U</strong>_1]</span><br /></p>
+<p>这意味着修改后的系统最终模态是修改前原始系统模态的线性组合。这是个相当重要的方程，用它可以表明模态截断的影响。</p>
+<p>让我们考虑一根自由梁，对它进行两个简单的结构修改，使之成为简支梁和悬臂梁。使用两根接地的弹簧对结构进行修改，写出SDM方程以便获得修改后的频率和模态振型。原始未修改的频率和修改后的频率如表1所示（注意：斜体表示的频率是系统受约束模态的一种近似，不属于本节讨论的范畴）。</p>
+<p>注意到仅使用系统修改前的原始前五阶模态，就获得了简支梁非常精确的修改后的模态，然而悬臂梁却做不到这一点。为什么简支梁可以得到如此好的结果，而悬臂梁却不行呢？问题是修改后的模态振型是怎样由系统修改前的原始模态形成的。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug00/01.png" alt="图1 用于估计的模型" /><p class="caption">图1 用于估计的模型</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug00/02.png" alt="图2 简支梁的第1阶模态" /><p class="caption">图2 简支梁的第1阶模态</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug00/03.png" alt="图3 简支梁的第2阶模态" /><p class="caption">图3 简支梁的第2阶模态</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug00/04.png" alt="图4 悬臂梁的第2阶模态" /><p class="caption">图4 悬臂梁的第2阶模态</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug00/05.png" alt="表1 不同系统的频率" /><p class="caption">表1 不同系统的频率</p>
+</div>
+<p>修改后的简支梁模态很容易由系统修改前的原始模态的线性组合得到。观察图2，注意到原始系统的1阶和3阶模态是最终修改后的简支梁的第1阶模态的最主要贡献者。观察图3，注意到原始系统的2阶和4阶模态是最终修改后的简支梁的第2阶模态的最主要贡献者。</p>
+<p>考虑修改后的悬臂梁的模态，发现原始系统修改前的前五阶模态对悬臂梁的模态都有很大的贡献。事实上，需要更多的模态才能改善悬臂梁模态的精度（注意：图4给出了悬臂梁的2阶模态）。</p>
+<p>简支梁的模态可以很容易地由自由梁的前五阶模态的线性组合得到，而悬臂梁却不能！因此事实是，不能得到所有模态（模态截断）不一定总会是个问题，真正的问题在于最终修改后的模态必须能够由原始修改前的模态明确定义。</p>
+<p>另一个重要的注意事项是自由梁的刚体模态（RBM）对于准确预测修改后的模态具有非常重要的作用。如果刚体模态不可用，那么预测的模态将是错误的。对于开发实验模态数据库，刚体模态是个相当重要的考虑事项，因为常常不要求刚体模态作为测试的组成部分。然而，可以明显看出刚体模态对于结构动力学修改成功至关重要，在本例的简支梁修改中就可以看出这一点。</p>
+<p>总之，使用SDM获得准确的修改后的模型的原则是，最终修改后的模态必须能够由修改前的模态的线性组合得到。如果能做到这一点，那么可以得到准确的结果；如果不能，那么由于模态截断将会产生误差。</p>
+<p>不涉及所有详细的方程，使用一些简单的图例说明SDM怎样使用修改前的系统模态得到修改后的系统模态估计。我希望这些能帮助你理解SDM怎样受模态截断的影响。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/结构动力学修改/">结构动力学修改</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-feb-01-tanxiangjun/" class="alignleft prev" title="Feb 01 - 能否用真实工作荷载作为模态测试的激励力">上一篇：Feb 01 - 能否用真实工作荷载作为模态测试的激励力</a>
+ 
+ 
+	<a href="/2014/01/06/modal-sapce/modal-space-oct-00-tanxiangjun/" class="alignright next" title="Oct 00 - 质量荷载和数据一致性对模态参数估计非常重要">下一篇：Oct 00 - 质量荷载和数据一致性对模态参数估计非常重要</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

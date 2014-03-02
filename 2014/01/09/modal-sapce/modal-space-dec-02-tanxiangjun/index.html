@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Dec 02 - 模态测试采集平均FRF vs 采集时域数据 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Dec 02 - 模态测试采集平均FRF vs 采集时域数据"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Dec 02 - 模态测试采集平均FRF vs 采集时域数据</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-dec-02-tanxiangjun/">1月 9 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>模态测试采集平均FRF好，还是采集时域数据然后再处理它好呢？</strong> <strong>让我们来探讨它们之间的差异……</strong></p>
+<p>倘若采集的都是高质量的数据，那么两种方法都是可接受的，但是采集时域数据更具优势。让我们探讨一下，采集存储这两种数据的不同之处。</p>
+<p>过去，选择将时域数据存储到磁盘上是不太可能的。典型的做法是，采集到时域数据后立即平均得到FRF数据。当时计算机的存储器和磁盘容量通常都非常小，因此必须立即处理时域数据（实际上，早期模态测试很少保存所有的频谱数据，大多数都只保存FRF数据。因为存储设备价格昂贵，所以不得不再三考虑决定保存哪些数据）。</p>
+<a id="more"></a>
+
+<p>这是过去大多数模态测试典型的操作模式。因为采集到数据后，平均的输入谱、输出谱和互谱，连同FRF和相干便可用于复查。这个方法采集到的数据含有直接信息，可用于确保获得足够的测量。采集到每组测量数据后可用于细察，如果需要，还可采集到其他一些数据，以获得改善的测量或者确定哪些是较差的测量数据。因为采集到了每组测量数据，便可复察每一组数据。如果任何一次测量数据出现问题，通过检查FRF和相干就会有直接的反馈，因为每次获得的测量是充足的。</p>
+<p>依赖于某些应用，有时，在测试现场用磁带采集和纪录数据，然后将这些数据拿回实验室进行处理，获得平均的FRF。然而，磁带和相关的磁带纪录仪器的使用，有时会引入了一大堆不同的问题，这些可能会降低一些数据的质量。虽然磁带机本身引入了一些问题，但保存时域数据的优势在于可以在完成测试以后对时域数据作进一步的处理。可以再研究采样参数以确定各种信号处理带来的影响，因为有时域数据可用。这就使得测试工程师能更深入地洞察采集到的数据的各个方面。如果只有平均的FRF可用，就不可能进行其他一些处理。</p>
+<p>今天，普遍的做法是直接将采集到的时域数据存储到磁盘上（这很大程度上是因为大容量的磁盘相当低廉）。先采集到时域数据，待测试完成后再进行处理。毫无疑问，采集时域数据是现今采集到的最有用处的数据。对于时域数据，仍然需要对数据进行一些相同的处理（FRF数据也需要这样处理），如图1所示。然而，如果需要进行其他一些处理，时域数据总是方便可行。如果需要，时域数据还可用于研究其他的信号处理方案。而保存平均的FRF数据是不可能用于这些方面的研究。一旦保存平均的FRF数据，就不太可能进行其他一些处理，因为没有可用的时域数据。</p>
+<p>基于上面的讨论，已相当明显采集时域数据是最有用的。似乎没有理由去采集其他类型的数据，除了时域数据。由时域数据可以得到任何形式的频谱。这样，就可以使用时域数据研究任何后续的处理。一旦有时域数据可用，随着技术的不断革新，便有可能提出新概念和新的数据处理方法。如果采集到平均数据，那么不可能用于进一步探索新的数据处理方法。</p>
+<p>然而，不管何时进行测试，只采集时域数据也是相当危险的。听到这句话可能觉得似乎与我上面所讨论的相矛盾。不管何时采集到的时域数据都没有直接的频谱信息，而频谱信息能够提供数据是否充足。而我们所知道的全部数据也就是存储到磁盘的时域数据。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec02/01.png" alt="图1 存储时域数据和平均FRF数据的示意图" /><p class="caption">图1 存储时域数据和平均FRF数据的示意图</p>
+</div>
+<p>一旦处理时域数据，得到的FRF质量怎么样？为获得高质量的FRF和可接受的相干函数，采集到的时域数据足够吗？有关采集到的时域数据是否足够，这儿还可以提出了其他一些疑问。在处理时域数据之前，你不知道数据质量怎样。由高费用的测试现场返回后才发现所有的时域数据都是不可接受的，这时你可能非常憎恨只保存时域数据了。</p>
+<p>因此采集数据的原则就是，采集所有你想要的时域数据，在测试现场最好处理一些典型的数据组，以确保采集到的数据是可接受的。必须检查一些FRF和相干！</p>
+<p>我希望这些探讨有助于明白保存时域数据和保存平均FRF数据之间的不同。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态测试/">模态测试</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-feb-02-tanxiangjun/" class="alignleft prev" title="Feb 02 - 模态测试哪种窗最合适">上一篇：Feb 02 - 模态测试哪种窗最合适</a>
+ 
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-apr-02-tanxiangjun/" class="alignright next" title="Apr 02 - 实模态与复模态的区别">下一篇：Apr 02 - 实模态与复模态的区别</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

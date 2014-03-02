@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Apr 02 - 实模态与复模态的区别 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Apr 02 - 实模态与复模态的区别"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Apr 02 - 实模态与复模态的区别</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-apr-02-tanxiangjun/">1月 9 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>复模态和实模态有什么不同？</strong> <strong>这有太多需要解释的地方，让我们从一些简单实例开始着手……</strong></p>
+<p>这个问题经常被提出来，让许多人都感到迷惑。因此让我们讨论一些细节，以说明它们之间的差异。不幸的是，在这儿为了帮助说明，我们不得不涉及到一些数学公式和一些基本理论。</p>
+<p>让我们首先考虑无阻尼的方程组，然后讨论有阻尼的情况：比例阻尼和非比例阻尼。这样它们之间的不同就变得显而易见了。将用一个简单例子说明这些结论。一般的物理系统的运动方程可以写成</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\mathbf{M}\end{bmatrix}\begin{Bmatrix}\ddot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{C}\end{bmatrix}\begin{Bmatrix}\dot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{K}\end{bmatrix}\begin{Bmatrix}\mathbf{x}\end{Bmatrix}=\begin{Bmatrix}\mathbf{F}\end{Bmatrix}
+$$</span><br /></p>
+<a id="more"></a>
+
+<p>这儿<span class="math">[<strong>M</strong>]</span>，<span class="math">[<strong>C</strong>]</span>和<span class="math">[<strong>K</strong>]</span>分别表示质量矩阵、阻尼矩阵和刚度矩阵，连同相应的加速度、速度和位移以及外力一起组成运动方程。</p>
+<p>变换到模态空间后，其形式为</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\setminus &amp;  &amp; \\\  &amp; \overline{\mathbf{M}} &amp; \\\  &amp;  &amp; \setminus \end{bmatrix} \left \\{ \mathbf{\ddot{p}} \right \\}+\begin{bmatrix}\setminus &amp;  &amp; \\\  &amp; \overline{\mathbf{C}} &amp; \\\  &amp;  &amp; \setminus \end{bmatrix}\left \\{ \mathbf{\dot{p}} \right \\}+\begin{bmatrix}\setminus &amp;  &amp; \\\  &amp; \overline{\mathbf{K}} &amp; \\\  &amp;  &amp; \setminus \end{bmatrix}\left \\{ \mathbf{p} \right \\}=\left [ \mathbf{U} \right ]^\mathrm{T}\left \\{ \mathbf{F} \right \\}
+$$</span><br /></p>
+<p>模态质量矩阵、模态刚度矩阵和某些情况下的模态阻尼矩阵都为对角阵。模态振型将解耦质量矩阵、刚度矩阵和某些特定类型的阻尼矩阵。为了理解这些情况，给出一个简单的例子。</p>
+<p>例子中定义如下矩阵</p>
+<p><br /><span class="math">$$
+[\mathbf{M}]=\begin{bmatrix} 2 &amp; 0\\\ 0 &amp; 3\end{bmatrix};[\mathbf{M}]=\begin{bmatrix} 2 &amp; -1\\\ -1 &amp; 1\end{bmatrix}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+[\mathbf{C}\_0]=\begin{bmatrix} 0 &amp; 0\\\ 0 &amp; 0\end{bmatrix};[\mathbf{C}\_\mathrm{p}]=\begin{bmatrix} 0.4 &amp; -0.1\\\ -0.1 &amp; 0.4\end{bmatrix};[\mathbf{C}\_\mathrm{n}]=\begin{bmatrix} 0.4 &amp; -0.1\\\ -0.1 &amp; 0.1\end{bmatrix}
+$$</span><br /></p>
+<p>首先，考虑无阻尼的情况。考虑质量矩阵 <span class="math">[<strong>M</strong>]</span> ，刚度矩阵 <span class="math">[<strong>K</strong>]</span> 和阻尼矩阵 <span class="math">[<strong>C</strong>_0]</span> ，由这组矩阵的特征值求解产生的频率、留数和振型为</p>
+<p><br /><span class="math">$$
+\mathbf{\lambda\_1}=0+0.3737\mathbf{j};\mathbf{a}\_1=\begin{Bmatrix}0+0.1230\mathbf{j}\\\ 0+0.2116\mathbf{j}\end{Bmatrix};\mathbf{u}\_1=\begin{Bmatrix}0.2459\\\ 0.4232\end{Bmatrix}=\begin{Bmatrix}1\\\ 1.72\end{Bmatrix}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+\mathbf{\lambda\_2}=0+1.0926\mathbf{j};\mathbf{a}\_2=\begin{Bmatrix}0+0.1868\mathbf{j}\\\ 0-0.0724\mathbf{j}\end{Bmatrix};\mathbf{u}\_2=\begin{Bmatrix}0.3735\\\ -0.1447\end{Bmatrix}=\begin{Bmatrix}1\\\ -0.387\end{Bmatrix}
+$$</span><br /></p>
+<p>注意到模态振型为带符号（+或-）的实数值。第1阶模态的两个自由度符号相同，这表明这两个自由度彼此同相位，只是幅值大小不同。第2阶模态的两个自由度符号相反，这表明这两个自由度彼此反相位，且幅值大小也不同。</p>
+<p>现在考虑第二种情况，比例阻尼，阻尼与系统的质量和/或者刚度成比例。这儿考虑质量矩阵<span class="math">[<strong>M</strong>]</span>，刚度矩阵<span class="math">[<strong>K</strong>]</span>和阻尼矩阵<span class="math">[<strong>C</strong>_<em>p</em>]</span>。由这组矩阵的特征值求解得出的频率、留数和模态振型为</p>
+<p><br /><span class="math">$$
+\mathbf{\lambda\_1}=-0.0579+0.3693\mathbf{j};\mathbf{a}\_1=\begin{Bmatrix}0+0.1244\mathbf{j}\\\ 0+0.2141\mathbf{j}\end{Bmatrix};\mathbf{u}\_1=\begin{Bmatrix}0.2488\\\ 0.4282\end{Bmatrix}=\begin{Bmatrix}1\\\ 1.72\end{Bmatrix}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+\mathbf{\lambda\_2}=-0.1097+1.0871\mathbf{j};\mathbf{a}\_2=\begin{Bmatrix}0+0.1877\mathbf{j}\\\ 0-0.0727\mathbf{j}\end{Bmatrix};\mathbf{u}\_2=\begin{Bmatrix}0.3754\\\ -0.1455\end{Bmatrix}=\begin{Bmatrix}1\\\ -0.387\end{Bmatrix}
+$$</span><br /></p>
+<p>注意到这组特征值求解得出的模态振型与无阻尼的情况相同，这是因为阻尼与系统的质量和/或刚度成比例。这样产生的模态称为“实模态”。因此，显然无阻尼和比例阻尼情况得出的模态振型完全相同。</p>
+<p>现在考虑第三种情况，此时阻尼不与系统的质量和/或者刚度成比例，即非比例阻尼。考虑质量矩阵 <span class="math">[<strong>M</strong>]</span> ，刚度矩阵 <span class="math">[<strong>K</strong>]</span> 和阻尼矩阵 <span class="math">[<strong>C</strong>_<em>N</em>]</span> 。这组矩阵得出的频率、留数和振型为</p>
+<p><br /><span class="math">$$
+\mathbf{\lambda\_1}=-0.0162+0.3736\mathbf{j};\mathbf{a}\_1=\begin{Bmatrix}-0.0071+0.1288\mathbf{j}\\\ -0.0048+0.2116\mathbf{j}\end{Bmatrix};\mathbf{u}\_1=\begin{Bmatrix}0.2456+0.0143\mathbf{j}\\\ 0.4232+0.0095\mathbf{j}\end{Bmatrix}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+\mathbf{\lambda\_2}=-0.1005+1.0872\mathbf{j};\mathbf{a}\_2=\begin{Bmatrix}-0.0071+0.1885\mathbf{j}\\\ -0.0048-0.0726\mathbf{j}\end{Bmatrix};\mathbf{u}\_2=\begin{Bmatrix}-0.3771+0.0142\mathbf{j}\\\ 0.1451+0.0096\mathbf{j}\end{Bmatrix}
+$$</span><br /></p>
+<p>对于这种情况，模态振型不同于前面的两种情况。首先，模态振型是复数值。仔细检查这些振型，可以看出每阶模态的各个自由度之间的相对相位关系已不再是完全同相位或反相位了。这种情况下产生的模态称为“复模态”。这跟前面两种情况大不相同。系统阻尼与系统的质量和/或刚度不相关时，得出的模态就为复模态，此时的阻尼称为非比例阻尼。为了求解特征值，使用形式稍稍不同的状态空间的方程，这样便于进行求解。</p>
+<p>考虑复模态时，所有的方程通常都变得更复杂。实模态与复模态之间一些简单结论总结如下：</p>
+<p><strong>实模态</strong>的一些特征：</p>
+<ol style="list-style-type: decimal">
+<li><p>通过驻波描述实模态，而这些驻波的节点位置是固定的；</p></li>
+<li><p>所有点同一时刻通过它们的最大和最小位置处；</p></li>
+<li><p>所有点同一时刻通过零点位置；</p></li>
+<li><p>模态振型为带符号的实数值；</p></li>
+<li><p>所有点同结构上任何其他点，要么完全同相位，要么完全反相位；</p></li>
+<li><p>无阻尼得到的模态振型与比例阻尼的模态振型相同，这些振型解耠质量、阻尼和刚度矩阵。</p></li>
+</ol>
+<p><strong>复模态</strong>的一些特征：</p>
+<ol style="list-style-type: decimal">
+<li><p>通过行波描述复模态，节点似乎在结构上移动；</p></li>
+<li><p>所有点不在同一时刻通过它们的最大值位置处，一些点似乎落后其它点；</p></li>
+<li><p>所有点不在同一时刻通过零点位置；</p></li>
+<li><p>模态振型不能用实数描述，为复数；</p></li>
+<li><p>不同自由度之间不存在特定的相位关系，没有完全同相位或者完全180度反相关系；</p></li>
+<li><p>由无阻尼情况得到的模态振型将不解耦阻尼矩阵。</p></li>
+</ol>
+<p>为了进一步形象化这些特征，绘出了悬臂梁某阶模态所对应的复模态振型和实模态振型，如图1所示。图1a为实模态，自由度之间的相对相位关系完全同相位（如图中蓝色和红色表示的自由度）或者完全180度反相位（如图中的绿色表示的与蓝色和红色表示的自由度）。而复模态不具有这种简单的相位关系，模态振型必须通过幅值与相位或者实部与虚部两者同时描述，如图1b所示。图1是有意去形象化它们之间的相位关系。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr02/01a.png" alt="图1a 比例（实）模态" /><p class="caption">图1a 比例（实）模态</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr02/01b.png" alt="图1b 非比例（复）模态" /><p class="caption">图1b 非比例（复）模态</p>
+</div>
+<p>需要着重指出的是相位关系在FRF测量中一直可见，有时这可能是复模态的标志，但必须小心过早下结论。数采系统、使用的仪器设备、信号处理过程、FFT和模态参数估计，所有这些步骤都可能扭曲测量，使得模态振型“看起来”宛如复模态振型。</p>
+<p>虽然这儿还有太多的东西需要加以讨论，但我希望这些简单的解释有助于你从更好的视角去理解这些。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态/">模态</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-dec-02-tanxiangjun/" class="alignleft prev" title="Dec 02 - 模态测试采集平均FRF vs 采集时域数据">上一篇：Dec 02 - 模态测试采集平均FRF vs 采集时域数据</a>
+ 
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-oct-02-tanxiangjun/" class="alignright next" title="Oct 02 - 模态测试容易犯的主要错误">下一篇：Oct 02 - 模态测试容易犯的主要错误</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

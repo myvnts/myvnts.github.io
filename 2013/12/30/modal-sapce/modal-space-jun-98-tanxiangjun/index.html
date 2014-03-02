@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2013-12-30T00:00:00.000Z"><a href="/2013/12/30/modal-sapce/modal-space-jun-98-tanxiangjun/">12月 30 2013</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>用激振器和力锤进行模态测试，二者有什么不同？</strong></p>
+<p><strong>好，这是个好问题。答案是有同也有异……</strong></p>
+<p>这是另一个会被经常问到的问题。有关这个问题，二者有太多的不同之处，让我们首先从一些基础知识开始，理解为什么用简单的是或者不是都很难回答这个问题。需要用到几个简单的方程帮助解释这个问题。</p>
+<p>首先，我们记得任何系统都可以用它的运动方程进行描述。本质上讲，方程是个简单的力平衡方程：质量×加速度+阻尼×速度+刚度×位移=外力。出于某些理由，这个方程在拉氏域更易于我们进行各种运算。通过拉氏变换，运动方程可以写成</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\begin{bmatrix}\mathbf{M}\end{bmatrix}\mathbf{s}^{2}+\begin{bmatrix}\mathbf{C}\end{bmatrix}\mathbf{s}+\begin{bmatrix}\mathbf{K}\end{bmatrix}\end{bmatrix}\begin{Bmatrix}\mathbf{X}(\mathbf{s})\end{Bmatrix}=\begin{Bmatrix} \mathbf{F}(\mathbf{s})\end{Bmatrix}\Rightarrow\begin{bmatrix}\mathbf{B(\mathbf{s})}\end{bmatrix}\begin{Bmatrix}\mathbf{X}(\mathbf{s})\end{Bmatrix}=\begin{Bmatrix} \mathbf{F}(\mathbf{s})\end{Bmatrix}
+$$</span><br /></p>
+<a id="more"></a>
+
+<p>将方程写成矩阵形式，便于组织所有的方程。[<strong>M</strong>]，[<strong>C</strong>]和[<strong>K</strong>]分别表示质量矩阵、阻尼矩阵和刚度矩阵，并且这些矩阵都是对称阵。因此，系统矩阵[<strong>B</strong>(<strong>s</strong>)]也是对称阵。系统的传递函数是系统矩阵的逆矩阵</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\mathbf{B(\mathbf{s})}\end{bmatrix}^{-1}=\begin{bmatrix}\mathbf{H(\mathbf{js})}\end{bmatrix}=\frac{\mathbf{adj}[\mathbf{B}(\mathbf{\mathbf{s}})]}{\mathrm{det}[\mathbf{B}(\mathbf{s})]}=\frac{[\mathbf{A}(\mathbf{\mathbf{s}})]}{\mathrm{det}[\mathbf{B}(\mathbf{s})]}
+$$</span><br /></p>
+<p>当然，还记得得到的频响函数仅仅是模态测试过程中系统传递函数沿频率轴的估计。很多时候，为方便起见，我们将频响函数写成部分分式形式</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun98/03.jpg" />
+</div>
+<p>频响函数矩阵中的单个元素可以写成</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun98/04.jpg" />
+</div>
+<p>为什么我不厌其烦地写出所有这些方程？那是因为在这些方程中含有非常重要的信息，与你的问题有关。因为[<strong>M</strong>]，[<strong>C</strong>]和[<strong>K</strong>]是对称阵，所以[<strong>B</strong>(<strong>s</strong>)]和[<strong>H</strong>(<strong>s</strong>)]也是对称阵。这意味[<strong>H</strong>(<strong>jw</strong>)]也是对称阵。这意味着hij=hji，这也称为互易性。这就表明你可以通过位置i点激励，在位置j点测量响应，得到FRF；同样也可以在位置点j激励，在位置i点测量响应，得到完全相同的FRF，这就是互易性。</p>
+<p>现在，我们对一根只有3个测点的悬臂梁进行锤击法测试，总共有9个可能的输入-输出频响函数。但对于这个例子，我们将加速度计置于3号测点处，通过锤击1，2和3点得到FRF。我们称3号测点为参考点，因为每一次锤击时，响应总是同一点。因为力锤是从一个测点移动到另一个测点，那么得到的频响函数为频响函数矩阵中的一行，并且是频响矩阵最后一行。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun98/05.jpg" />
+</div>
+<p>在讨论其他问题以前，让我们先讨论用激振器进行相同的测量。将激振器置于测点3处，加速度计在梁上1，2和3号测点逐点移动，得到FRF，注意3号测点仍然是参考点，因为每一次测量时，激励总是在同一点。既然激励力的位置是固定的，那么得到的FRF为频响函数矩阵的一列，且为该矩阵的最后一列。</p>
+<p>如果观察得到的频响函数，会注意到由激振器激励得到的h13与由力锤锤击激励得到的h31完全相同，同时注意到由激振器激励得到的h23与由力锤锤击激励得到的h32也完全相同，这就是所谓的互易性。从理论上讲，由激振器测试和由锤击法测试采集到的数据没什么不同，两种方式获得的数据完全相同，但这仅仅是理论观点。如果按照理论观点，没有理由不可以按以下方式进行测试：通过保持锤击点不变，加速度计沿着测点逐点移动；对于激振器测试也有相同的类推：保持响应加速度计在同一测点，逐点移动激振器（但我不知道谁会以这种方式进行测试！）。从理论观点上讲，只要数据采集得到输入-输出位置的传递特性，那么不管何种输入-输出方式，采集的数据都没有什么不同。</p>
+<p>所以，对于激振器测试和锤击法测试，答案是二者没有什么不同之处，但这仅仅是理论观点！如果我们能够在结构上施加一个纯力，该力与结构二者之间不存在任何的相互作用，并且可以使用一个无质量的传感器测量响应，那么此种情况下，不管哪种测量方式对结果都是没有影响的，理论是成立的，但现实却不是这样的！</p>
+<p>现在让我们从现实角度出发，思考所进行的测试。观点是在模态测试过程中，激振器和响应传感器通常对结构都有影响。需要明白的主要事项是处于测试状态下的结构已不再是你起初想得到模态参数的那个结构了。因为结构上已附加了与数据采集过程有关的其他东西，如结构支承方式、已安装的传感器的质量，以及激振器顶杆潜在刚度的影响等等。因此，虽然理论告诉我们，锤击法测试和激振器测试，二者没有任何区别时，而现实测量中却因实际数据采集各个方面的影响，使得二者的测试结果有着很大的差异。</p>
+<p>激振器测试过程中，最明显的差异出现在移动加速度计过程中。加速度计的质量相对于结构的总质量可能非常小，但是它的质量相对于结构不同部分的有效质量可能非常大。在多通道系统中，为了获得所有的FRF，有多个传感器沿着结构移动，这个影响尤为突出。特别是轻质结构，这个影响会是个严重的问题。解决此问题的方法之一是在结构上安装所有传感器，即使每次测量只用到少量几个；另一个方法是在未测量的测点位置安装与传感器质量相等的质量块，这样就能消除移动质量的影响。</p>
+<p>另一个不同之处是激振器/顶杆的影响。结构的模态可能本质上会受激振器附属装置质量和刚度的影响。当我们试图最小化这些影响时，它们可能仍然存在。顶杆的作用是分离激振器给结构带来的影响。然而，对于大多数结构而言，激振器附属装置的影响可能仍然显著。既然锤击法测试不会遭遇这些问题，因而必将得到不同的结果。</p>
+<p>因此，虽然理论告诉我们，激振器测试和锤击法测试二者得到的结果没有差异，但实际上，因实际测量中各个方面的差异必然导致二者产生一些不同。我希望这些能消除你的疑问。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/激振器/">激振器</a>, <a href="/tags/力锤/">力锤</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/02/modal-sapce/modal-space-dec-98-tanxiangjun/" class="alignleft prev" title="Dec 98 - 激振器哪种激励方式最好？它们有什么不同?">上一篇：Dec 98 - 激振器哪种激励方式最好？它们有什么不同?</a>
+ 
+ 
+	<a href="/2013/12/29/modal-sapce/modal-space-apr-98-tanxiangjun/" class="alignright next" title="Apr 98 - 时域、频域和模态空间有什么不同之处">下一篇：Apr 98 - 时域、频域和模态空间有什么不同之处</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

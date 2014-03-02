@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Apr 99 - 怎样由FRF得到模态振型？ | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Apr 99 - 怎样由FRF得到模态振型？"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Apr 99 - 怎样由FRF得到模态振型？</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-apr-99-tanxiangjun/">1月 2 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>我仍不然理解曲线拟合……怎样由FRF得到模态振型？</strong> <strong>好……让我们明白，是否我能清楚地消除这个疑问……</strong></p>
+<p>到目前为止，模态参数估计（通常称为曲线拟合）或许是大多数人理解实验模态分析最难的部分。我可以写出所有的方程去解释这一点，但是这样做可能会让你极其厌烦。在这，我不仅必须要写出与模态参数估计过程有关的所有方程，而且还要表明这些和留数相关的方程与模态振型的关系。当然，留数是另一个抽象的概念（我多么希望称它为模态振型而不是留数，因为这样只会更迷惑人）。</p>
+<p>上一篇我们讨论了曲线拟合模型和用于参数估计的基本方程，形式之一为</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr99/01.jpg" />
+</div>
+<p>这些项都以矩阵的形式给出，矩阵A是留数矩阵，从曲线拟合过程中得到。同时从方程的分母中也可以得到系统极点，即频率和阻尼。这些留数表明了与模态振型的关系，无须遍历所有过程，二者的相互关系可以用下式表示（展开了一些项）</p>
+<a id="more"></a>
+
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr99/02.jpg" />
+</div>
+<p>如果观察每一列，可以看出矩阵每一列都包含了模态振型信息和标量因子。根据互易性原理，可以看出矩阵每行也包含模态振型信息。考虑某一列，如第一列，那么可以得到</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr99/03.jpg" />
+</div>
+<p>因此，留数仅仅是模态向量乘以一个标量，此标量为模态向量在参考点处的振型值 和缩放比例因子 的乘积。比例因子考虑了模态振型可以用不同的比例常数（如单位模态质量、单位长度等等）来表示。</p>
+<p>这儿有些方程，或许可能你已充分理解，也可能完全不理解。解释这个概念的更好途径可能是通过一些简单的图例来说明。在这再次用到以前讨论过的平板例子，可以方便地解释我们怎样由FRF得到模态振型（这样你可能能理解这些数学公式起什么作用了）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr99/04.jpg" />
+</div>
+<p>在平板上进行一些测量，总共得到6个频响函数：4个在角点，2个在中点。我们希望由这6个FRF能确定前两阶模态振型。考虑频响函数对数幅值，但这不是很有用，因为在频响函数曲线图中所有的峰值都是正值。</p>
+<p>更有用的信息是FRF的虚部。这些项同时表明了幅值和响应的方位，其中方位是最重要的信息。不涉及所有的数学求解过程，我们知道FRF的虚部的峰值振幅直接与留数相关（而留数与模态振型相关）。近似方程为</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr99/05.jpg" />
+</div>
+<p>这个方法确定模态振型相当简单，通常称为峰点拾取法，因为我们拾取的是FRF的峰值。观察每个测点处的每个FRF峰值（在给出的图中，幅值的量程在-1到+1之间，虚线为量程的一半，另外，省略了频率轴）。现在首先仅关心第1阶，然而关心第2阶模态。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr99/06.jpg" />
+</div>
+<p>考虑1阶模态1号测点处的FRF，注意它的幅值为0.5，方向为负。2号测点的幅值也为0.5，同样也是负方向。这意味着1阶模态的1点和2点以相同的幅值和相同的方向运动。如果考虑5号和6号测点，可以得到与1号和2号测点相同的结果。因此，1，2，5和6号测点以相同的幅值和相同的方向运动。</p>
+<p>如果仅仅测量这四个测点，那么平板的模态振型看起来像刚体模态（四点以相同大小的幅值一起运动）。这是在用太少的测点描述系统的模态时，经常会遭遇的一个普遍问题。</p>
+<p>考虑第1阶模态的3号测点，注意到幅值为0.5，但是它的方向为正，4号测点具有相同的结果。因此3号和4号测点以相同的幅值和相同的方向一起运动。但是注意到3号和4号测点运动方向与其余四个测点的运动方向相反。现在，虽然我们可以不必再测量多于6个测点的数据，就可以得到平板的变形方式为弯曲变形，但是如果测量更多的测点，那么得出来的模态振型会更光顺。</p>
+<p>考虑第2阶模态，遍历所有测点，将会看到1号和2号测点具有相同的幅值，但是二者的运动方向相反。5号和6号测点相同于1号和2号测点。但是注意到1号和5号测点，它们也是反向运动，2号和6号测点也是如此。因此，平板的第2阶模态为扭转变形。如果考虑3号和4号测点，注意到这两个点的幅值为零，这是因为3号和4号测点是平板扭转模态的节点。同样，增加测点，得到的振型更光顺。</p>
+<p>现在我们能明白FRF虚部的峰值直接与平板的每一阶模态振型相关。不涉及所有的数学知识，留数是从曲线拟合过程中提取出来的，并且直接与平板的模态振型相关。这同时也表明给出这些图例使得说明起来更简单。</p>
+<p>我希望这些有助于帮助你消除怎样由FRF得到模态振型的疑惑。回想一下，如果你还有更多模态分析方面的问题，请咨询我。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/FRF/">FRF</a>, <a href="/tags/振型/">振型</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/02/modal-sapce/modal-space-jun-99-tanxiangjun/" class="alignleft prev" title="Jun 99 - ODS和模态振型之间的区别？">上一篇：Jun 99 - ODS和模态振型之间的区别？</a>
+ 
+ 
+	<a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/" class="alignright next" title="Aug 98 - 移动力锤和移动加速度计测试有什么不同">下一篇：Aug 98 - 移动力锤和移动加速度计测试有什么不同</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

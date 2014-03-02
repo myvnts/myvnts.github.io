@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Oct 01 - 模态参数估计是否需要使用所有的测量数据 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Oct 01 - 模态参数估计是否需要使用所有的测量数据"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Oct 01 - 模态参数估计是否需要使用所有的测量数据</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-oct-01-tanxiangjun/">1月 7 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>模态参数估计时，是否需要使用采集到的所有测量数据？</strong> <strong>让我们来讨论这个问题……</strong></p>
+<p>这是个相当不错的问题。倘若测量得到的数据都是高质量和连续相关的数据，没有理由不使用所有采集到的数据。倘若测试时，具有动态范围足够的仪器，灵敏准确的传感器，并且从所有参考点位置和所有响应位置都充分激起了系统所有的模态，那么，所有的数据都能用于模态参数估计。</p>
+<p>但是我上面说的是一句总结性的话，是必要条件，从你脸上的表情就可以看出，所有的测量数据都满足这个要求是极其不可能的。在过去的四分之一个世纪里，我亲自操作的或者与我有关的任何模态测试，从来都没有做到这一点，不光我一个人这样，别人也是如此。我刚才描述的那种测量情况，只有可能出现在分析模型中，并且该分析模型具有无限宽的动态范围和极其高的频率分辨率。从现实角度考虑，现实中这样的情况是不可能出现的。所以，我们讨论现实中的测试情况和一些实际可行的方法，用于将测量中的不足减少到最小程度。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct01/01.png" alt="图1 航空结构的FRF和一些模态振型" /><p class="caption">图1 航空结构的FRF和一些模态振型</p>
+</div>
+<a id="more"></a>
+
+<p>作为常见测试问题的一个实例，我将使用多年前对一个航空结构进行的模态测试，该航空结构的模态具有严重的方向性，并且有多阶局部模态。图1所示为该结构和一些典型的FRF。注意图中下边的FRF曲线只显示了少数几阶模态，而上面的FRF曲线显示了结构所有模态。事实上，这个问题不仅仅是一个航空结构的问题，而是我们模态测试中普遍遭遇的问题。而图示的FRF仅是这方面的一个典型案例，几乎对任何结构进行模态测试都会遇到这个问题。</p>
+<p>图示的结构具有一些低阶的弯曲和扭转模态，紧接着的是结构上的仪表盘和外围设备的多阶弯曲、扭转、同步和异步等类型的局部模态。实际测试时用五个独立的激振器进行激励（三个垂直方向和两个水平方向）。</p>
+<p>结构的第1阶模态为x方向的弯曲模态，y方向几乎没有响应。显然，x方向的激振器对激励x方向的模态有突出贡献，但是y方向的激振器却没有激起x方向的模态。因此，从y方向激振器得到的FRF明显较差，因为结构的第1阶模态没有y方向的响应参与。</p>
+<p>另一方面，结构的第2阶模态为y方向的弯曲模态，几乎没有x方向的响应。这儿刚好与前面讨论的情况相反。即y方向的激振器对激励y方向的模态有突出贡献，但是x方向的激振器却没能激起y方向的模态。但是这两个方向的激振器对激励结构的扭转模态都有杰出贡献。这直接意味着不可能每阶模态都以相同的精度测量所有的FRF。</p>
+<p>采用五个激振器进行多输入-多输出（MIMO）激励，所有的FRF都是同时采集的，但是显然所有的模态不可能由每个激振器均等地激起。这是多数测试中普遍存在的物理事实，通常不可能克服。然而，怎样才能有效、准确地处理所有这些数据？</p>
+<p>现今多数模态参数估计方法，通常分两个处理步骤。首先估计极点，然后计算留数或模态振型（要求先提取到整体极点）。记住这一点：进行系统极点估计时，不需要使用所有的FRF。可以使用部分频响函数，也就是那些能最合理描述感兴趣的极点的频响函数来估计系统极点。一旦得到系统整体极点，那么留数或者模态振型就可以使用所有测量DOF提取到（没有必要使用所有参考点来估计留数，特别是如果某些参考点没能充分激起结构所有模态时）。选择特定的FRF用于估计系统极点的示意图，如图2所示。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct01/02.png" alt="图2 选择FRF的示意图" /><p class="caption">图2 选择FRF的示意图</p>
+</div>
+<p>在这个例子中，仅用了由x方向激励位置产生的x方向响应的测量数据估计x方向的第1阶弯曲模态。仅用了由y方向激励位置产生的y方向响应的测量数据估计y方向的弯曲模态。但是同时使用了x和y方向激励与x和y方向响应的测量数据估计结构的扭转模态。注意没有使用z方向的激励和响应估计这些模态的极点。这是因为z方向激励很难有效地激起x或y方向的模态。虽然这些（z方向）参考点/激励点对激励结构的一些高阶模态是必须的，但是这些垂直方向的激励对x和y方向的低阶模态却没有多大贡献。但是，当然，一旦估计出整体极点，然后就需要使用所有的x，y和z方向的FRF估计留数或模态振型，只是在估计x和y方向的低阶模态时，仅仅使用x和y方向的激振器激励数据。</p>
+<p>在模态参数估计过程中，最关心的是需要多次反复提取到最佳的可能极点去描述系统动态特性。然而，所有测试数据中的大部分和所有参考点中的大部分对于所有的系统模态而言，都不是最适宜的。比如，最近测试一个大型的望远镜结构，用四个激励点作为参考点。显然，这些参考点对于结构具有方向性的所有低阶模态不是最适宜的。第一次进行参数估计时，使用由所有参考点得到的所有FRF去提取系统的极点和留数。一旦选择了所有的数据，便生成了一个综合的FRF，对比实际获得的FRF，作为校验处理的一部分。图3a中给出了综合的和测量的FRF。仔细观察会注意到测量得到的FRF和综合的FRF一致性较差。然而，经过一系列仔细计算和认真选择FRF去提取系统极点（接着提取留数），得到了一个更优的模型。这也可以通过图3b中综合的FRF和测量得到的FRF，进行对比得到证实。当然，这个方法要付出更多的精力，但是得到的模态参数会有相当大的改善。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct01/03a.png" alt="图3a 较差的极点提取和差的合成FRF" /><p class="caption">图3a 较差的极点提取和差的合成FRF</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct01/03b.png" alt="图3b 好的极点提取和好的合成FRF" /><p class="caption">图3b 好的极点提取和好的合成FRF</p>
+</div>
+<p>我希望这些解释能帮助你理解，当进行模态参数提取时，为什么没必要使用所有的FRF（或者事实上是有害的）。合理选择最佳的测量FRF通常将产生更优的整体系统极点。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态参数估计/">模态参数估计</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/" class="alignleft prev" title="Apr 01 - 锤击法测试时，指数窗可能会引起问题">上一篇：Apr 01 - 锤击法测试时，指数窗可能会引起问题</a>
+ 
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-dec-01-tanxiangjun/" class="alignright next" title="Dec 01 - 测试装置对模态参数是否有影响">下一篇：Dec 01 - 测试装置对模态参数是否有影响</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

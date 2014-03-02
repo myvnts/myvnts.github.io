@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Jun 02 - 数据采集的基本步骤 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Jun 02 - 数据采集的基本步骤"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Jun 02 - 数据采集的基本步骤</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-jun-02-tanxiangjun/">1月 9 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>能为我解释模态测试数据采集的基本步骤吗？</strong> <strong>这有太多的需要解释，但让我只想总结一些基本步骤……</strong></p>
+<p>基本的数据采集过程分几个步骤，并且锤击法测试和激振器测试又稍微有些不同，在这将分别讨论。</p>
+<p>对于锤击法测试，用力锤或其他一些类型的冲击设备对结构进行激励，此时作用在结构上的力信号是可测的。通常使用加速度计，但有时也用激光传感器或者其他类型的测量传感器测量结构的响应。通常，数据采集系统的第一通道测量作用到结构上的激励力。虽然这对大多数采集系统来说不是必要条件，但是直到今天，许多测试工程师仍然遵循这个习惯。其余通道测量响应信号（依赖使用的采集系统是双通道还是多通道系统）。为了开始数据采集，通常对冲击设备所在通道加触发条件。开始测量前，必须为数采系统指定一个最小的触发电压。对于大多数模态测试而言，通常触发标准为激励力对应的最大电压的10%~20%。对于大多数采集系统，为了捕捉到整个冲击设备的瞬时力脉冲信号，必须为力信号所在通道指定预触发延滞。通过使用预触发延滞，不会遗漏部分冲击力脉冲。</p>
+<a id="more"></a>
+
+<p>传感器采集到的数据，在进行任何数字化之前，总是要通过一个低通、模拟滤波器。这样做的目的主要是滤掉那么不感兴趣的高频成分，防止出现混叠。这些模拟滤波器通常称为抗混叠滤波器，用于过滤夹杂在信号中的高频成分，而这些高频成分是我们不关心的，并且会浸污测量的频率成分。</p>
+<p>然后数据传送到模数转换器（ADC），在这采集数据并转换成数字信号。这有两点值得关注。必须以一定的速率进行采样，以便将时域数据转换到频域时，充分描述其特征。通常，采样频率至少为关心的最高频率的二倍。如果处理数据时，需要刻画数据的时域特征，那么采样频率至少设置为关心的最高频率的10~20倍，这样才能充分描述系统的时域特征。为了正确地表征信号的幅值特征，模数转换器必须设置合适的电压量程。如果设置不合理，那么测量信号存在的量化误差将可能成为新的问题。大多数数据采集系统都具有一种功能，称为自动量程，帮助所有的数据采集通道设置合适的电压量程。模数转换器的量程也可手动设置量程，但必须不断尝试设置，以确保所有的采集通道设置合理。否则，量程设置太高，信号会遭受量化误差；或者设置过低，会因过荷而削波。</p>
+<p>这样一来，描述冲击和响应的未经任何处理的数字化数据才可用。根据实际信号的时域特征，可能需要加窗，以便将其他原因产生的任何泄漏减少到最小程度。如果锤击法测试数据采集过程没有完全捕捉到整个瞬态信号，那么将会出现泄漏。如果锤击通道存在显著的噪声，那么可能需要加力窗，以减少噪声的输入。如果响应信号在采样周期末端还没有充分衰减到零，那么需要为响应信号加指数窗，以避免因傅立叶变换引起的信号失真。</p>
+<p>加指数窗之前，需要考虑两个信号处理方法。考虑采集更长的时域信号使得响应信号自然地衰减到零，或者减少带宽或者增加谱线条数，两个方法最终都将延长总的采样时间。这样更长的采样时间使得响应信号自然地衰减到零，因而可以减少指数窗的应用。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun02/01.png" alt="图1 锤击法测试流程图" /><p class="caption">图1 锤击法测试流程图</p>
+</div>
+<p>对于激振器测试，通常数据采集系统的第一通道测量激振器的激励信号(这不是必须的，但是许多人仍遵循这样的习惯)，数采系统其余通道测量响应信号。依据使用的激励技术，触发也将不同。对于随机激励，通常使用“自由触发”模式。然而，其他的激励技术（如猝发随机，正弦扫频等），通常采用信号源触发或外触发。另外，有时需要为猝发随机指定预触发延滞。</p>
+<p>对于激振器大多数激励技术，不需要加窗，因为这些信号本身具有“特殊”的特点，能提供无泄漏的测量，因而满足FFT变换的要求。然而，如果采用任意的激励技术，如随机激励，那么就需要加窗，如汉宁窗，以最小化泄漏。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun02/02.png" alt="图2 激振器随机激励测试流程图" /><p class="caption">图2 激振器随机激励测试流程图</p>
+</div>
+<p>无论是锤击法测试还是激振器测试，都需将捕捉到的时域数据通过FFT变换转换到频域。FFT变换为输入和输出信号提供线性傅立叶谱（注意这些函数都是复值函数）。这将提供输入自谱(Gxx)，输出自谱(Gyy)和输入-输出的互谱(Gyx)。这三个谱使用各自的时域数据进行平均。一旦得到Gxx、Gyx 和Gyy，那么就可计算频响函数和相干了。虽然频响函数可以使用不同的形式，但当今大多数单输入模态测试中，H1是频响函数最常用的形式。图1和图2分别描述了锤击法和激振器测试流程。</p>
+<p>虽然开发的实验模态模型只要求测量频响函数，但很多时候自谱和互谱，以及相干还是作为数据存储的一部分（对于有富余的磁盘存储空间，没有理由不存储所有的测量数据）。</p>
+<p>显然，这有太多的方面需要讨论，但是我希望这些能帮助你明白实验模态测试整个过程中一些基本测量步骤。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-oct-02-tanxiangjun/" class="alignleft prev" title="Oct 02 - 模态测试容易犯的主要错误">上一篇：Oct 02 - 模态测试容易犯的主要错误</a>
+ 
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/" class="alignright next" title="Aug 01 - 锤击法测试注意事项">下一篇：Aug 01 - 锤击法测试注意事项</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

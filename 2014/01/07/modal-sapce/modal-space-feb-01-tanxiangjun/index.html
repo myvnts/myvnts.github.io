@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Feb 01 - 能否用真实工作荷载作为模态测试的激励力 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Feb 01 - 能否用真实工作荷载作为模态测试的激励力"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Feb 01 - 能否用真实工作荷载作为模态测试的激励力</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-feb-01-tanxiangjun/">1月 7 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>如果使用真实工作荷载作为模态测试中的激励力，并且该力为随机信号，这样有意义吗？</strong></p>
+<p>回答这个问题不太容易，因为这个问题涉及许多方面，为了全面理解这个答案，我们需要进行讨论。</p>
+<p>使用随机工作激励看起来似乎是个不错的想法，但是通过该激励方式提取得到的模态参数不可能完全与采用传统激励技术得到的模态参数一样好。让我们讨论这个问题，看看工作激励存在哪些不足之处。为了理解这个结论的所有方面，会涉及到模态其他方面的一些问题与答案，这些将有助于使你更明白这个问题。</p>
+<a id="more"></a>
+
+<p>让我们回想一下，实验模态测试通常是提取结构的模态参数，即频率、阻尼和模态振型。为了提取到这些参数，需要精确地测量频响函数。通常，我们努力使用专门的激励技术对结构进行激励，以减小，并且最终消除泄漏和其他一些可能产生的信号处理误差。记住，任何信号处理误差都将扭曲测量得到的频响函数，降低模态参数的精度。</p>
+<p>一般来说，随机信号不提供精确的频响函数测量，不是最合适的激励方式。随机激励技术会引起频谱泄漏是众所周知的。相比其他无泄漏的激励技术（比如猝发随机、正弦扫频、数字步进正弦），随机激励即使加窗，仍会使频响函数失真。</p>
+<p>比较由随机激励和猝发随机激励得到的频响函数，如图1所示。从图中可以清晰地看出，猝发随机激励为无泄漏测量，其结果远远优于随机激励测量（相干也是如此，但图中没有给出）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb01/01.png" alt="图1 猝发随机和随机激励的FRF" /><p class="caption">图1 猝发随机和随机激励的FRF</p>
+</div>
+<p>更进一步，由随机激励提取到的模态参数也存在失真，在许多情况下，随机激励的FRF似乎会出现两个峰，如图1所示。这是随机激励对频响函数典型的影响。泄漏是个严重问题，因此，必须加窗以便将泄漏减小到最小程度。模态测试开发专门的函数的最终目的是为了获得高精度的频响函数，因此要求提供无泄漏的测量，不需要使用任何窗函数。</p>
+<p>因此，用工作状态下的随机激励进行模态测试，将会得到什么？如果使用实际工作状态下的力去激励结构，那么结构响应将与实际工作状态下的响应相似。这个响应将是结构在工作状态下的实际变形的精确反映。这样测量得到的响应更适合于工作变形分析，而不是实验模态分析。</p>
+<p>图2为一任意输入激励引起结构响应的示意图。图中的有关方面将为这个讨论的问题给出更深刻的剖析。力函数为宽频带，但是可以明显地看出力谱并不平坦，因而激励所有模态的激励力大小是不同的。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb01/02.png" alt="图2 典型的随机输入-输出" /><p class="caption">图2 典型的随机输入-输出</p>
+</div>
+<p>首先，最重要的是频响函数刚好是个带通滤波器，可以放大或削弱输入激励力。如果因数字信号处理过程（比如数字化、量化、泄漏、窗函数、FRF方法等等）造成频率响应估计失真，将会发生什么样状况？当然，这对计算响应有影响。模态测试的目的就是提取精确的系统动态特性。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb01/03.png" alt="图3 激励信号大小不同" /><p class="caption">图3 激励信号大小不同</p>
+</div>
+<p>第二，频率范围内的力谱的激励力大小对系统响应有直接影响。图3非常清楚地表明响应在频带上变化剧烈。因为总响应频谱确定模数转换器ADC的最大档位设置，那么测量函数的精度就会有较大的变化。事实上，与模数转换过程相关的量化误差会对响应较小的谱成分的精度造成更大的影响。如考虑图中的1阶和3阶响应，这种影响明显尤为突出。注意到1阶模态的响应非常小，是因为输入激励极其小，1阶响应过于小，可能会遭受噪声的影响。</p>
+<p>第三，如果使用随机激励，必须加汉宁窗，否则测量得到的信号中将遭遇严重的泄漏。无论如何，测量得到的频响函数都会遭受窗函数和泄漏的影响。这样测量得到的频响函数质量不高，提取到的模态参数也将遭受这些信号处理误差的影响。</p>
+<p>第四，测量得到的频响函数将存在误差，该误差与激励信号在一些频率区域激励能量太弱有关。随机激励信号的随机特点使得频响函数存在泄漏和受窗函数的影响。频响函数与泄漏相关的误差在相干中也清晰可见，特别是在共振峰处。因为使用低质量的频响函数将使得模态参数估计也出现误差。</p>
+<p>所以由测量函数开发模态模型时，最佳的激励技术将得到最合适的结构模态参数结果。因此，没有必要使用工作状态下的随机激励作为模态测试的激励方式。一旦开发了一个模态模型，那么结构的真实响应也随之确定，如果必要的话，可以使用如图2所示的频响函数加以说明。但是为了得到准确的响应，由精确的频响函数开发得到的精确的模态模型是极其重要的。</p>
+<p>现今，使用工作条件下的激励进行工作测试有很多巨大的优点。然而，使用工作激励不是为开发模态模型而进行的频响函数估计的最佳途径。现在我希望你已明白与工作激励进行实验模态测试相关的问题。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态测试/">模态测试</a>, <a href="/tags/激励/">激励</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-jun-01-tanxiangjun/" class="alignleft prev" title="Jun 01 - 使用多参考点的好处">上一篇：Jun 01 - 使用多参考点的好处</a>
+ 
+ 
+	<a href="/2014/01/06/modal-sapce/modal-space-aug-00-tanxiangjun/" class="alignright next" title="Aug 00 - 结构动力学修改是否起作用">下一篇：Aug 00 - 结构动力学修改是否起作用</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

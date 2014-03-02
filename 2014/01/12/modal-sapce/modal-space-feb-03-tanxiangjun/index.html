@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Feb 03 - 校准和模态振型缩放的重要性 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Feb 03 - 校准和模态振型缩放的重要性"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Feb 03 - 校准和模态振型缩放的重要性</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-11T16:00:00.000Z"><a href="/2014/01/12/modal-sapce/modal-space-feb-03-tanxiangjun/">1月 12 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>为什么校准和模态振型缩放很重要？它们影响重大吗？</strong> <strong>让我们来探讨一下……</strong></p>
+<p>校准和模态振型缩放是开发准确的动力学模型两个重要的方面，模型可能用于其他方面的结构动力学研究。这些动力学研究包括仿真、预测、动力学修改、相关性检查等等方面。虽然这儿给出的几个实例，校准和缩放可能不关键，但我还是推荐这样做，因为这样获得的数据可能是最合适的。我们首先讨论校准，然后再讨论缩放。</p>
+<p>整套采集系统的校准工作是非常重要的。早期的两通道FFT分析仪，很多时候，只有当需要解决实际问题或者快速调查测试时，我们才可能进行校准，因为我们只对输出输入之比感兴趣，因此这个校准工作可能不关键。这也许还能容忍，因为我们仅对结构的大体振型感兴趣。但是，只要模态数据用于仿真，预测等方面，那么必须使用完全校准过的模型。动力学模型用于结构动力学其他方面的研究时，精确的校准是必要的。</p>
+<a id="more"></a>
+
+<p>随着多通道FFT分析仪的普通使用，使用的加速度计（可能具有不同的灵敏度）至少需要名义的校准值。如果不进行标定校准，那么结构不同区域的振型可能存在相对差别，这样在理解模态振型上，可能会引起迷惑。</p>
+<p>因此，校准需要做些什么呢？具有一套完整的校准系统是最好不过了。这需要将一个完整的采集通道作为一个整体来校准，包括加速度计、信号调理仪，ADC通道、导线等一同校准。虽然单独校准每个子块经常也是可接受的，但首选一同校准整个通道测试系统。校准的方法多种多样。可以用一些性能更优的基准加速度计校准其他加速度计，这在实验室里就可以进行，将需要校准的加速度计安装在基准加速度计上面进行校准。或者通过一些已知质量的块体进行跌落测试校准被校的加速度计。另一个普遍使用的校准方法是利用激励方式，将力传感器安装在带加速度计的已知质量的块体上。这就可以通过使用已知质量的块体的运动方程确保得到力和加速度之比（如果他们当中的一个是已知的，就可以标定另一个）。最精确的校准方法是从头到尾校准测试过程中要使用的所有采集通道。</p>
+<p>虽然许多校准服务公司提供固定频率增量的校准方式（如50，100，200，500，1000，……），但这仅仅提供在这些离散频率处的校准信息。更合适的校准方法是在感兴趣的频率范围内进行宽带输入激励进行校准。</p>
+<p>既然校准已经讨论过了，那么我们接下来讨论模态振型缩放。我们知道振型是各个测点之间的相对运动，但需要保持一定的缩放比例。也就是模态质量、模态阻尼和模态刚度之间的相互关系。振型并不重要，重要的是振型与物理量之间的关系。振型可以任意缩放，但最普遍的缩放是单元模态质量缩放（也有其他形式的缩放，如单元长度、最大值等于1也很普通）。最重要的是振型可以为将来的参考缩放到一定量，这个量是可确定的。缩放是进一步使用动力学模型用于仿真、预测、相关性检查等的关键步骤。</p>
+<p>为了说明振型缩放，考虑一个简单的3自由度系统。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb03/01.png" />
+</div>
+<p>系统的运动方程和指定的系统各物理量为</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\mathbf{M}\end{bmatrix}\begin{Bmatrix}\ddot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{C}\end{bmatrix}\begin{Bmatrix}\dot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{K}\end{bmatrix}\begin{Bmatrix}\mathbf{x}\end{Bmatrix}=\begin{Bmatrix}\mathbf{F(t)}\end{Bmatrix}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+\begin{bmatrix} 1 &amp;  &amp; \\\  &amp; 1 &amp; \\\  &amp;  &amp; 1 \end{bmatrix}\begin{Bmatrix} \ddot{x_1} \\\ \ddot{x_2} \\\ \ddot{x_3} \end{Bmatrix}+\begin{bmatrix} 0.2 &amp; -0.1 &amp; \\\ -0.1 &amp; 0.2 &amp; -0.1\\\  &amp; -0.1 &amp; 0.2 \end{bmatrix}\begin{Bmatrix} \dot{x_1} \\\ \dot{x_2} \\\ \dot{x_3} \end{Bmatrix}+\begin{bmatrix} 20000 &amp; -10000 &amp; \\\ -10000 &amp; 20000 &amp; -10000\\\  &amp; -10000 &amp; 20000 \end{bmatrix}\begin{Bmatrix} x_1 \\\ x_2 \\\ x_3 \end{Bmatrix}=\begin{Bmatrix} f_1 \\\ f_2 \\\ f_3 \end{Bmatrix}
+$$</span><br /></p>
+<p>相应的特征值求解方程为</p>
+<p><br /><span class="math">$$
+[[\mathbf{K}]-\mathbf{\lambda}[\mathbf{M}]]\left \\{ \mathbf{X} \right \\}=\left \\{ 0 \right \\}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+[\mathbf{\Omega}^2 ]=\begin{bmatrix} 5858 &amp;  &amp; \\\  &amp; 20000 &amp; \\\  &amp;  &amp; 34142 \end{bmatrix}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+[\mathbf{U}]=\begin{bmatrix} \left \\{ \mathbf{u}_1 \right \\} &amp; \left \\{ \mathbf{u}_2 \right \\} &amp; \left \\{ \mathbf{u}_3 \right \\}\end{bmatrix}=\begin{bmatrix} \begin{Bmatrix} 0.500\\\  0.707\\\ 0.500\end{Bmatrix} &amp; \begin{Bmatrix} 0.707\\\  0\\\ -0.707\end{Bmatrix} &amp; \begin{Bmatrix} -0.500\\\  0.707\\\ -0.500\end{Bmatrix} \end{bmatrix}
+$$</span><br /></p>
+<p>现在仅用系统的第1阶模态来说明缩放。第1阶模态的频率为12.18Hz，阻尼为0.038%和复数极点为-0.029±j 76.537弧度/秒。</p>
+<p>现在回想一下描述FRF的极点和留数。对于第1阶模态，为</p>
+<p><br /><span class="math">$$
+\mathbf{h(j\omega )=h(s)|\_{s=j\omega } =\frac{a_1}{(j\omega -p_1)}+\frac{a^\*_1}{(j\omega -p^\*_1)}}
+$$</span><br /></p>
+<p>我们知道留数直接与模态振型相关</p>
+<p><br /><span class="math">$$
+\mathbf{\left [ A(s) \right ]_k=q_k \left \\{ u_k \right \\} \left \\{ u_k \right \\}^T}
+$$</span><br /></p>
+<p>其展开式为 <br /><span class="math">$$
+\begin{bmatrix}
+\mathbf{a}\_{\mathrm{11k}} &amp; \mathbf{a}\_{\mathrm{12k}} &amp; \mathbf{a}\_{\mathrm{13k}} &amp; \cdots\\\ 
+\mathbf{a}\_{\mathrm{21k}} &amp; \mathbf{a}\_{\mathrm{22k}} &amp; \mathbf{a}\_{\mathrm{23k}} &amp; \cdots\\\ 
+\mathbf{a}\_{\mathrm{31k}} &amp; \mathbf{a}\_{\mathrm{32k}} &amp; \mathbf{a}\_{\mathrm{33k}} &amp; \cdots\\\ 
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots 
+\end{bmatrix}=\mathbf{q}\_{\mathrm{k}}
+\begin{bmatrix}
+\mathbf{u}\_{\mathrm{1k}}\mathbf{u}\_{\mathrm{1k}} &amp; \mathbf{u}\_{\mathrm{1k}}\mathbf{u}\_{\mathrm{2k}} &amp; \mathbf{u}\_{\mathrm{1k}}\mathbf{u}\_{\mathrm{3k}} &amp; \cdots\\\ 
+\mathbf{u}\_{\mathrm{2k}}\mathbf{u}\_{\mathrm{1k}} &amp; \mathbf{u}\_{\mathrm{2k}}\mathbf{u}\_{\mathrm{2k}} &amp; \mathbf{u}\_{\mathrm{2k}}\mathbf{u}\_{\mathrm{3k}} &amp; \cdots\\\ 
+\mathbf{u}\_{\mathrm{3k}}\mathbf{u}\_{\mathrm{1k}} &amp; \mathbf{u}\_{\mathrm{3k}}\mathbf{u}\_{\mathrm{2k}} &amp; \mathbf{u}\_{\mathrm{3k}}\mathbf{u}\_{\mathrm{3k}} &amp; \cdots\\\ 
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots 
+\end{bmatrix}
+$$</span><br /></p>
+<p>在这个方程中，缩放常数‘q’是非常重要的一项。虽然缩放有许多不同类型，但最常用的一个是单元模态质量缩放（在有限元建模分析软件中，也常用单元模态质量进行缩放）。采用这种方式，系统的模态参数：模态质量、模态阻尼和模态刚度分别定义为：</p>
+<p>模态质量 <span class="math">$\mathbf{\bar{m}_k=\frac{1}{q_k \bar{\omega}_k}}$</span></p>
+<p>模态阻尼 <span class="math">$\mathbf{\bar{c}_k=2\sigma_k \bar{m}_k}$</span></p>
+<p>模态刚度 <span class="math">$\mathbf{\bar{k}_k=(\sigma^2_k+\bar{\omega}^2_k)\bar{m}_k}$</span></p>
+<p>现在如果我们考虑展开式中的第一列，那么留数通过下式与振型直接相关</p>
+<p><br /><span class="math">$$
+\begin{Bmatrix}a\_{11k}\\\ a\_{21k}\\\ a\_{31k}\\\ \vdots \end{Bmatrix}=q\_k u\_{1k} \begin{Bmatrix}u\_{1k}\\\ u\_{2k}\\\ u\_{3k}\\\ \vdots \end{Bmatrix}
+$$</span><br /></p>
+<p>注意到方程中有一个重要的参数：比例因子‘q’，这个缩放常数使得模态振型与系统模态质量、模态阻尼和模态刚度之间保持合理的缩放关系。注意，如果我们进行一次测量，如测量h31，那么a31=qu3u1（也可以测量h21，那么a21=qu2u1等等）。对于这样的每个关系式，都有一个留数提取值（由曲线拟合过程得到），但有两个模态振型值。因此从这一点也可以说明模态振型是不同测点之间的‘相对运动’。这个用留数表示的相对运动以动画的形式体现，含有丰富的相关信息。然而，如果考虑驱动点测量，那么看到方程中的h11中a31=qu1u1，因而可以用这个方程求解u1，然后又用u1缩放这一列中所有其他的测量项。</p>
+<p>我常常听到一些人说没有必要缩放模态振型和没有必要进行原点测量。虽然视觉上察看模态振型，这是成立的，但是不进行任何缩放的模态数据不能进一步用于其他分析处理。为了进一步的研究，如结构动力学修改、强迫响应、预测、仿真和相关性检查等，模态振型缩放是必须的。</p>
+<p>因为本实例中的模态是实模态，留数是复数值，但是它是纯虚数。为了简化这些数字，留数通过r=2ja（注意在许多商业模态分析软件中，这是留数常见的表达）转换成实数表达。</p>
+<p>本例中第1阶模态的留数‘r’的值为</p>
+<p>dof1 = (0.003266 + j 0.0) dof2 = (0.004619 + j 0.0) dof1 = (0.003266 + j 0.0)</p>
+<p>留数与振型的相互关系，通过比例因子相联系</p>
+<p><br /><span class="math">$$
+\begin{Bmatrix}
+0.3266\mathbf{E}-2\\\ 
+0.4619\mathbf{E}-2\\\ 
+0.3266\mathbf{E}-2
+\end{Bmatrix}=
+\begin{Bmatrix}
+\mathbf{r}\_{11}\\\ 
+\mathbf{r}\_{21}\\\ 
+\mathbf{r}\_{31}
+\end{Bmatrix}^{(1)}=q\_1 u\_1 \begin{Bmatrix}
+\mathbf{u}\_1\\\ 
+\mathbf{u}\_2\\\ 
+\mathbf{u}\_3
+\end{Bmatrix}^{(1)}=\frac{1}{76.537}(0.500)\begin{Bmatrix}
+0.500\\\ 
+0.707\\\ 
+0.500
+\end{Bmatrix}
+$$</span><br /></p>
+<p>因此，可以看出模态振型存在明确的缩放关系，完成振型缩放必须通过原点测量实现。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/振型/">振型</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/12/modal-sapce/modal-space-jun-03-tanxiangjun/" class="alignleft prev" title="Jun 03 - 辨别伪重根必须用多个参考点吗">上一篇：Jun 03 - 辨别伪重根必须用多个参考点吗</a>
+ 
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-aug-02-tanxiangjun/" class="alignright next" title="Aug 02 - MIMO测试的优势">下一篇：Aug 02 - MIMO测试的优势</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

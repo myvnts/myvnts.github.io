@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Apr 98 - 时域、频域和模态空间有什么不同之处 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Apr 98 - 时域、频域和模态空间有什么不同之处"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Apr 98 - 时域、频域和模态空间有什么不同之处</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2013-12-29T00:00:00.000Z"><a href="/2013/12/29/modal-sapce/modal-space-apr-98-tanxiangjun/">12月 29 2013</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>能解释时域、频域和模态空间，三者有什么不同吗？我一直听说它们，但是不知道它们有什么不同。</strong></p>
+<p><strong>有关这个需要讲解的地方太多，但我们还是从一些简单的方面开始着手吧……</strong></p>
+<p>这个问题经常有人问到，三者有太多的不同之处，因此让我们从一个简单的说明开始着手，不涉及太多的数学知识，用一个简单的示意图来解释。用这个图讨论时域、频域、模态空间和物理空间之间的所有不同之处。这个图有太多方面需要讨论，故将此图分成许多子块，每次讨论其中一块，最后对所有子块进行总结。你可能还记得前面进行“什么是模态分析”的讨论（“你能为我解释模态分析是什么吗？”），在这前面的讨论对我们解释这个问题有帮助作用。</p>
+<div class="figure">
+<img src="http://bcs.duapp.com/modal-sapce/apr98/01.jpg" />
+</div>
+<a id="more"></a>
+
+<p>首先，让我们考虑一根悬臂梁，假设在梁的自由端受到一个脉冲激励。梁自由端的响应将包含系统所有模态（图中用黑色表示时域响应）的响应，注意到这个响应是多个频率的响应。通过傅立叶变换，将梁自由端的响应从时域变换到频域。虽然傅立叶变换包含许多数学公式，但它已是一种人们一直常用的变换运算算法。时域信号的频域表达通常称为频响函数或者简写成FRF（图中用黑色绘出了频响函数），注意图中的峰值对应于系统的固有频率。</p>
+<p>在进一步讨论时域和频域之前，先说说图中左上角的物理模型。我们知道悬臂梁有许多阶固有频率，在每一阶固有频率处，结构都将以一种确定的方式发生变形，这种变形叫做模态振型，如上一小节中描述的一样。对于这根梁，图中蓝色为第1阶弯曲模态，红色为第2阶弯曲模态，绿色为第3阶弯曲模态。当然，还有许多高阶模态没有给出，在这我们仅仅讨论前三阶模态，并且从前三阶模态可以很容易地推广到高阶模态。</p>
+<p>这样的实体梁也可以用图中右上角的解析集中质量模型（黑色绘出）或者有限元模型来作估算。这个模型通常用方程组进行估算，这些方程组在一些不同的位置或不同自由度（DOF）之间，存在相互作用或者称为耦合。这意味着如果你推动模型中的某一个自由度，那么其他自由度也会受到影响，并且产生运动。这些耦合行为意味着为了确定系统的响应行为，这些方程将变得更为复杂。随着描述系统的方程数目变得越来越大，那么方程的复杂程度也就越来越高。通常将描述系统特征的运动方程组用矩阵形式来表示。</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\mathbf{M}\end{bmatrix}\begin{Bmatrix}\ddot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{C}\end{bmatrix}\begin{Bmatrix}\dot{\mathbf{x}}\end{Bmatrix}+\begin{bmatrix}\mathbf{K}\end{bmatrix}\begin{Bmatrix}\mathbf{x}\end{Bmatrix}=\begin{Bmatrix}\mathbf{F(t)}\end{Bmatrix}
+$$</span><br /></p>
+<p>这里[M]，[C]和[K]分别表示质量矩阵、阻尼矩阵和刚度矩阵，连同相应的加速度向量、速度向量和位移向量以及外力向量一起组成运动方程。通常质量矩阵是对角阵，阻尼和刚度矩阵是带有非对角元素的对称阵，这些非对角元素确定了描述系统的不同方程或不同自由度之间的耦合程度，矩阵的大小由描述系统的方程总数决定。从数学角度讲，通过求解特征值和模态变换，将这些耦合的方程进行解耠，解耠后的方程为一组单自由度系统的运动方程，且此时转换后的新坐标系统，叫模态空间，解耠后的模态质量、模态阻尼和模态刚度矩阵全为对角阵，如：</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\backslash     &amp; \\\  &amp;  \overline{\mathbf{M}}  &amp; \\\  &amp;  &amp;  \backslash \end{bmatrix}\begin{Bmatrix}\mathbf{\ddot{p}}\end{Bmatrix}+\begin{bmatrix}\backslash     &amp; \\\  &amp;  \overline{\mathbf{C}}  &amp; \\\  &amp;  &amp;  \backslash \end{bmatrix}\begin{Bmatrix}\mathbf{\dot{p}}\end{Bmatrix}+\begin{bmatrix}\backslash     &amp; \\\  &amp;  \overline{\mathbf{K}}  &amp; \\\  &amp;  &amp;  \backslash \end{bmatrix}\begin{Bmatrix}\mathbf{p}\end{Bmatrix}=\begin{bmatrix}\mathbf{U}\end{bmatrix}^{\mathbf{T}}\begin{Bmatrix}\mathbf{F}\end{Bmatrix}
+$$</span><br /></p>
+<p>因此我们可以看出模态转换是将方程从物理空间通过模态转换方程转换到模态空间的过程；是将一组复杂的、耦合的物理方程转换成一组单自由度系统的、解耠的方程的过程。因而，我们可以将图中的解析模型分解成一组单自由度系统，如图中所示的蓝色1阶、红色2阶和绿色3阶模态组成。模态空间使得我们更易于用单自由度系统去描述结构系统。</p>
+<p>现在回到图中用黑色表示的时域和频域响应。我们知道系统总的响应可由每阶模态的贡献得到，图中黑色表示的总响应由1阶、2阶和3阶模态响应组成。不管是在时域还是频域描述系统，这个结论总是成立的。每个域都是等价的，仅仅是从不同的角度去描述而已。如同货币一样，从一个国家到另一个国家，每个国家的货币看起来都不相同，但是它们实质是同一个东西。所以可以看出系统总的时间响应是由各阶时间响应所组成的，即由1阶、2阶和3阶模态的时域响应贡献所组成。系统总的频响函数也是由各阶频响函数组成，即由1阶、2阶和3阶的频响函数组成（在这我们仅仅给出了频响函数的幅值部分，频响函数其实是很复杂的，正确的表示方式应该是用幅值和相位或者实部和虚部来表示）。</p>
+<p>既然我们可以将解析模型分解成一组单自由度系统的组合，因而我们可以确定每个单自由度系统的频响函数，如图所示1阶、2阶和3阶模态。同样也可以通过一种近似解确定由脉冲引起的每个单自由度系统的时域响应，或由每个单自由度系统的FRF的傅立叶逆变换得到的时域响应。我们也可以在梁的自由端测量由脉冲引起的响应，并且过滤系统每阶模态的响应，那么我们就可以看到系统每阶模态的响应，如1阶、2阶和3阶模态（当然，我简化了许多理论，以便我们能理解这些概念）。</p>
+<p>既然我们已经剖析了图中所有的子块部分，那么我想应该更清楚了在时域、频域、模态空间和物理空间并没有实质性的不同，仅仅是形式不同而已。每个域仅仅是为了便于描述或者察看数据。然而，有时从一个域察看某些信息会比其他的域更容易、更便捷。比如，从总的时域响应就不清楚有多少阶模态对梁的响应有贡献，但是频域的总的频响函数就能清楚显示有多少阶模态被激起和每一阶模态对应的频率是多少。因此，我们经常将数据从一个域变换到另一个域，仅仅是因为数据更易于解释。</p>
+<p>关于这些还有太多的需要去讲解，但是我希望这些简单的、示意性的解释能从另一个角度帮助你更好地理解这些概念。回想一下，如果你还有模态分析其他方面的问题，请咨询我。</p>
+<h4 id="备注">备注：</h4>
+<ol style="list-style-type: decimal">
+<li>原文链接：<a href="http://sdasl.uml.edu/umlspace/apr98.pdf" target="_blank">http://sdasl.uml.edu/umlspace/apr98.pdf</a></li>
+</ol>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态空间/">模态空间</a>, <a href="/tags/模态/">模态</a>, <a href="/tags/模态参数/">模态参数</a>, <a href="/tags/共振/">共振</a>, <a href="/tags/固有频率/">固有频率</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2013/12/30/modal-sapce/modal-space-jun-98-tanxiangjun/" class="alignleft prev" title="Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同">上一篇：Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同</a>
+ 
+ 
+	<a href="/2013/12/28/modal-sapce/modal-space-preface/" class="alignright next" title="写在前面">下一篇：写在前面</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

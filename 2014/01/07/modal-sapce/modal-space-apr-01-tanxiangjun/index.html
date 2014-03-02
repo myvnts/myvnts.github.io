@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Apr 01 - 锤击法测试时，指数窗可能会引起问题 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Apr 01 - 锤击法测试时，指数窗可能会引起问题"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Apr 01 - 锤击法测试时，指数窗可能会引起问题</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/">1月 7 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>锤击法测试时，使用指数窗会引起怎样的问题？</strong> <strong>让我们讨论它……</strong></p>
+<p>如果指数窗使用不合理，将会引起一些问题。如果需要使用迅速衰减的指数窗（大指数窗）以便最小化泄漏所造成的影响，那么你将会冒着丢失密集模态的风险。这儿有几个实例与指数窗的使用有关，明白如果不反复尝试施加不同大小的指数窗，将会产生什么样的结果。</p>
+<p>首先，我必须明确地指出在许多锤击法测试中，指数窗都是必要的。然而，在加任何窗之前，明智的做法是尝试更换不同的窗去减小泄漏的影响。在使用指数窗之前，总是需要考虑的是，增加谱线的条数或者减半带宽，二者本质上都是增加总的采样时间。这种考虑很有帮助，因为这是考虑让系统响应在采样周期结束之前自然地衰减到零。如果这一点能够实现，那么没必要使用指数窗。</p>
+<p>然而，如果响应在采样周期结束前仍没有衰减到零，那么可能指数窗是必要的。在应用指数窗之前，应先考虑前面提及的两个方法作为最小化泄漏影响的可能方法。在没有考虑时域响应的情况下，就在测试的第一步任意地加指数窗，不推荐这样做。让我们通过一个简单的实例说明这一点。</p>
+<a id="more"></a>
+
+<p>对一个非常简单，小阻尼的结构进行锤击测试。400Hz带宽内的信号选择的信号处理参数是加1秒的时域指数窗。因为结构的响应在采样周期结束前没有衰减到零，那么需要施加一个指数窗，加窗后的响应在采样周期结束前将衰减到相当小的值，这样可以最小化泄漏所带来的影响。锤击激励、加窗的衰减响应和FRF，如图1所示。表面上看，此次测量看起来是可接受的。【注意力谱（图中没有给出）在整个频带内相当平坦，因而可认为充分地激励了结构。同时注意到相干（图中也没给出）认为也是可接受的。】</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr01/01.png" alt="图1 衰减较慢下的FRF" /><p class="caption">图1 衰减较慢下的FRF</p>
+</div>
+<p>从各方面来看，此次测量似乎完全可接受。但是我们需要更深层次地看待此次测量。首先，考虑相同的测量，但是对响应信号施加了一个衰减更快的指数窗。图2中给出了同样的峰值，但是指数窗的衰减指数较大。本次锤击测量产生的FRF中的阻尼比图1所示的FRF中的阻尼明显要大得多。FRF的峰值表明了这个影响，注意因为使用了大阻尼指数窗，FRF的峰比较宽胖。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr01/02.png" alt="图2 衰减较快下的FRF" /><p class="caption">图2 衰减较快下的FRF</p>
+</div>
+<p>现在更深入一点去考察此次测量，并尝试改变一些信号处理参数。为了减少衰减窗的使用，可以缩短带宽或者增加谱线的条数，以便增加分辨率。两个方法都将必然引起总的采样时间的增加。如果增加总的采样时间，那么对采集到的数据加大指数窗的需求会减少。</p>
+<p>图3是将谱线的条数增加一倍后的结果。时间样本长度由1秒增加到2秒。虽然仍然需要施加指数窗以最小化泄漏的影响，但是此次加窗对测量数据所带来的总的阻尼影响远小于图1和图2中所带来的影响。</p>
+<p>最需要注意的是图3中在FRF的第一个峰值处似乎只有一阶模态，但实际上原来是两阶非常靠近的密集模态。图1和图2中使用的指数窗，导致FRF第一个峰值处只有一阶模态。图3中使用指数窗之后，使得FRF在似乎只有一阶模态的第一个峰值处，实际上出现了明显不同的两阶模态。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr01/03.png" alt="图3 增加时间/频率分辨率后的FRF" /><p class="caption">图3 增加时间/频率分辨率后的FRF</p>
+</div>
+<p>虽然加衰减窗以最小化泄漏是必须的，但是图1和图2中加窗函数扭曲了真实的FRF，致使在FRF的第一个峰值频率处很难观测到两阶模态。当必须为数字信号处理使用指数窗时，在估计小阻尼结构和空间上有非常靠近的模态时，如本例中的情况，将会引起一些严重的问题。</p>
+<p>现在我希望你能由这个例子明白指数窗的一些影响。虽然加指数窗以最小化泄漏可能是必须的，但是窗的使用可能会隐藏或者扭曲FRF中的模态。故锤击法测试时，当需要使用指数窗时，需要极其小心。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/锤击法/">锤击法</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/" class="alignleft prev" title="Aug 01 - 锤击法测试注意事项">上一篇：Aug 01 - 锤击法测试注意事项</a>
+ 
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-oct-01-tanxiangjun/" class="alignright next" title="Oct 01 - 模态参数估计是否需要使用所有的测量数据">下一篇：Oct 01 - 模态参数估计是否需要使用所有的测量数据</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

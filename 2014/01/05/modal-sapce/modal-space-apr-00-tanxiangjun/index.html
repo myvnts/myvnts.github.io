@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Apr 00 - 能否用斜角激励代替坐标系方向的激励进行模态测试 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Apr 00 - 能否用斜角激励代替坐标系方向的激励进行模态测试"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Apr 00 - 能否用斜角激励代替坐标系方向的激励进行模态测试</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-04T16:00:00.000Z"><a href="/2014/01/05/modal-sapce/modal-space-apr-00-tanxiangjun/">1月 5 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>模态测试时，x方向激励得到了一些模态，y方向激励得到了另外一些模态，我可以用倾角激励代替它们进行模态测试吗？</strong></p>
+<p>这是个相当不错的问题。激振器进行模态测试时，这个问题经常被提出来。当然，激振器保持倾角激励，这完全是可接受的。但是我们唯一需要注意的是要确保我们选择的参考点不是模态节点。让我们详细地讨论这一点。</p>
+<p>以一个简单结构开始此次讨论，该结构的模态振型具有明显的方向性。振型具有方向性是指结构某阶模态所对应的响应主要是在一个方向上，其他方向的响应很小或者没有响应，而结构的另一阶模态所对应的响应主要是在另一个方向，其他方向的响应很小或者没有响应。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr00/01.png" alt="图1" /><p class="caption">图1</p>
+</div>
+<a id="more"></a>
+
+<p>为了说明这一点，考虑图1所示的非常简单的框架结构。可以看出结构的1阶模态主要在水平方向运动，在垂直方向的运动量非常小。然而，结构的2阶模态主要是在垂直方向运动，在水平方向的运动量非常小。同样可以看出3阶和4阶模态也遵循相同的运动趋势，5阶和6阶模态在水平和垂直方向都有运动，但是垂直方向运动稍稍突出些。</p>
+<p>如果考虑在垂直方向进行原点测量，频率带宽覆盖结构前6阶模态，如图2所示。注意到频响函数曲线只有2个共振峰可见，而我们知道在这个频率范围内结构有六阶模态。如果我们在水平方向进行驱动点测量，频响函数曲线也只有4个共振峰可见。通过仔细检查，我们注意到这两次测量得到的前两个频率是不同的。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr00/02.png" alt="图2" /><p class="caption">图2</p>
+</div>
+<p>因此，我们能够明白，结构前六阶模态在每一次测量中都不能完全可见。这直接意味着如果我们选择图2所示的两个测点中的任一个作为参考点，那么显然，我们得不到结构的所有模态。为什么会这样呢？</p>
+<p>让我们回想一下频响函数方程</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr00/001.png" />
+</div>
+<p>将其展开成前3阶模态的形式（这仅仅是为了说明的需要）</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr00/002.png" />
+</div>
+<p>该方程通过系统每阶模态的留数（分子）和极点（分母）来描述，我们还记得留数直接与模态振型（和一个比例因子）相关</p>
+<p><br /><span class="math">$$
+\mathbf{a\_{ijk}}=\mathbf{q\_{k}}\mathbf{u\_{ik}}\mathbf{u_{jk}}
+$$</span><br /></p>
+<p>因此，频响函数可以用留数或者模态振型表示。当用模态振型表示时，那么方程将变得很直观：如果模态振型在参考点的值为零（或者几乎为零），那么该阶模态在频响函数中将不可见。因此，进行一次高质量的模态测试的诀窍就是合理选择一个参考点，由此参考点，所有模态在FRF中一直可见。但是有些时候，这一点说起来容易做起来难，特别当我们不知道预期的系统模态振型是什么样子的时候（这样总是容易成为放马后炮的人）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr00/03.png" alt="图3" /><p class="caption">图3</p>
+</div>
+<p>现在单独考虑系统前四阶模态，那么易于明白最合适的参考点位置是结构上模态振型值最大的点。但是我很快意识到对于每阶模态而言，最合适的参考点位置都是不同的。这时选择的技巧是，由选择的参考点能“适度”地观测到系统每阶模态。设法用直角坐标系x，y和z坐标将这些点标识出来，到底该选择哪一点，许多人都会举棋不定。</p>
+<p>如果设法施加一个外力，沿整体直角坐标系45度方向作用于该结构，那样结果会怎样呢？为了测量到所有感兴趣的模态，此参考点是否合理？</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/apr00/04.png" alt="图4" /><p class="caption">图4</p>
+</div>
+<p>回答这些问题的最佳途径是考察形成频响函数的方程。我们知道方程可以用模态振型来表示。考虑系统前四阶模态，会注意到这几阶模态在45度方向都有响应分量。这就意味着这个参考点对于测量系统前四阶模态是合适的。然而，如果作进一步考察，考虑5阶和6阶模态，那么将迅速发现由该参考点不能测量到这两阶模态。这是因为，横梁的中点是结构5阶和6阶模态的节点。</p>
+<p>因此我们可以选择任何一点，甚至包括与整体坐标成某一定角度的测点作为参考点。选择参考点的唯一要求是模态振型在该点的振型值要显著，如果选择的参考点是某阶模态的节点，那么测量的响应中将没有那阶模态的响应。最后需要提及的是，为了获得有效的“缩放模态振型”，原点测量是必须的（将在以后的章节中讲述模态振型缩放）。这意味着测量响应必须与外力在同一个测点和同一个方向，这同样也适用于与整体坐标成某一角度的参考点测量。</p>
+<p>我希望这些解释能让你明白，你可以选择参考点沿任何一个角度，只要不是某阶模态的节点。如果你还有模态分析的其他方面的问题，请咨询我。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态/">模态</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/06/modal-sapce/modal-space-dec-00-tanxiangjun/" class="alignleft prev" title="Dec 00 - 解释模态分析中的奇异值分解SVD方法">上一篇：Dec 00 - 解释模态分析中的奇异值分解SVD方法</a>
+ 
+ 
+	<a href="/2014/01/05/modal-sapce/modal-space-jun-00-tanxiangjun/" class="alignright next" title="Jun 00 - 测点数目多少足够">下一篇：Jun 00 - 测点数目多少足够</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

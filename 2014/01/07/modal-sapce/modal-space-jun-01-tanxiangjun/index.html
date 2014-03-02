@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Jun 01 - 使用多参考点的好处 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Jun 01 - 使用多参考点的好处"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Jun 01 - 使用多参考点的好处</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-jun-01-tanxiangjun/">1月 7 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>使用多参考点有何好处？我认为只需要一个参考点。</strong> <strong>让我们探讨一下……</strong></p>
+<p>这是个不错的问题，在由测试数据估计模态参数方面，这是经常会被提出来的问题之一。模态分析理论清楚地表明确定一个系统所有模态，一个参考点已足够，至少理论上是成立的。虽然理论的确成立，但从实际角度出发，在许多测试情况中，强烈需要使用多参考点。在理解这一点之前，让我们考虑一些基本概念，这将有助于说明我们可能遭遇的一些问题。</p>
+<p>让我们以一个简单的框架结构为例着手本次讨论，该框架结构的模态振型具有非常强的方向性。在以前一些章节的讨论中，我们用过该结构。结构如图1所示，并给出了前六阶模态振型。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun01/01.png" alt="图1" /><p class="caption">图1</p>
+</div>
+<a id="more"></a>
+
+<p>如果我们只考虑在垂直方向设置一个参考点（如图2所示），关心的频率范围覆盖结构前六阶模态，注意到在测量得到的频响函数中只有两个峰值可见。而我们知道在这个频率范围内，结构有六阶模态。如果我们只考虑在水平方向设置一个参考点，也只有四个共振峰可见。通过仔细检查两次测量，发现两次测量的前两阶频率完全不相同。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun01/02.png" alt="图2" /><p class="caption">图2</p>
+</div>
+<p>让我们回想一下频响函数方程</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun01/001.png" />
+</div>
+<p>该方程主要由系统每一阶模态的留数（分子）和极点（分母）来描述。我们知道这个频响函数可以用任何一个感兴趣的输入-输出组合来表示。这个方程感兴趣的部分是留数和极点，虽然留数的改变依赖于获得的输入-输出组合，但是极点保持不变。这暗示着系统极点是全局特性，它们独立于特定的输入-输出位置。然而，留数却依赖于这些特定的输入-输出位置，发生改变。</p>
+<p>进行模态测试时，获得的所有测量都是相对于特定的参考点而言的。进行激振器测试时，参考点位置通常是固定的激励位置；进行锤击法测试时，参考点的位置通常是固定的加速度计的测量位置。因此，获得的FRF包含的留数信息，也是相对于一个特定的参考点而言的，形式为</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}
+\mathbf{a}\_{11} &amp; \mathbf{a}\_{12} &amp; \mathbf{a}\_{13} &amp; \cdots 
+\end{bmatrix}\_{\mathbf{k}}
+$$</span><br /></p>
+<p>在这种情况中，参考点是“1”，因为所有的留数都是相对这个DOF而言的。留数是 <span class="math"><em>a</em>_11, <em>a</em>_12, <em>a</em>_13</span> 等等（注意下标“k”是表示系统某一阶特定的模态）。</p>
+<p>我们知道留数直接与模态振型（和比例因子）相关</p>
+<p><br /><span class="math"><strong>a</strong>_ijk = <strong>q</strong>_k<strong>u</strong>_ik<strong>u</strong>_jk</span><br /></p>
+<p>这表明留数实际上直接与系统的模态振型相关</p>
+<p><br /><span class="math">$$
+\begin{Bmatrix} \mathbf{a}\_{\mathrm{11k}}\\\ \mathbf{a}\_{\mathrm{21k}}\\\ \mathbf{a}\_{\mathrm{31k}}\\\ \cdots \end{Bmatrix}=\mathbf{q}\_{\mathrm{k}}
+\begin{Bmatrix} \mathbf{u}\_{\mathrm{1k}}\mathbf{u}\_{\mathrm{1k}}\\\ \mathbf{u}\_{\mathrm{2k}}\mathbf{u}\_{\mathrm{2k}}\\\ \mathbf{u}\_{\mathrm{3k}}\mathbf{u}\_{\mathrm{3k}}\\\ \cdots \end{Bmatrix}=\mathbf{q}\_{\mathrm{k}}\mathbf{u}\_{\mathrm{1k}}
+\begin{Bmatrix} \mathbf{u}\_{\mathrm{1k}}\\\ \mathbf{u}\_{\mathrm{2k}}\\\ \mathbf{u}\_{\mathrm{3k}}\\\ \cdots \end{Bmatrix}
+$$</span><br /></p>
+<p>注意1点的参考自由度（DOF）可以提为公因子，因为它对所有的测量都是公用的。提出公因子之后，方程就清楚地表明参考点的自由度起到了极大的，与留数大小相关的加权的作用，这样表明参考自由度与频响函数的大小直接相关。对于某一阶特定的模态，如果参考点位于结构模态振型响应非常小的位置，那么那阶模态的频响函数的数值也非常小。另一方面，如果参考点位于模态振型响应非常大的位置，那么频响函数的数值也非常大。</p>
+<p>当然，我们因而也明白，如果参考自由度对某一阶模态振型响应非常大，而对另一阶模态响应非常小，那么频响函数的幅值将也有相同的特点（对参考点响应大的，其幅值也大，对参考点响应小的，其幅值也小）。进行任何模态测试，这都是个常见的问题。我们总是设法将加速度计置于这样一个位置：使用相同的测试条件，在感兴趣的频率范围内，由该位置能观测到结构的所有模态。然而，做到这一点几乎极其困难，许多情况下，几乎不可能做到。</p>
+<p>然而，我们可以通过在频响函数矩阵中使用多个参考点去改善这种状况。如果考虑频响矩阵中某些项，那么你会发现一些有趣的信息。下式中给出留数矩阵和相对于参考点的一些展开项</p>
+<p><br /><span class="math">$$
+[\mathbf{A(S)}]\_\mathrm{k}=\mathbf{q}\_\mathrm{k} \\{\mathbf{u}\_\mathrm{k}\\}\\{\mathbf{u}\_\mathrm{k}\\}^\mathbf{T}
+$$</span><br /></p>
+<p><br /><span class="math">$$
+\begin{bmatrix}
+\mathbf{a}\_{\mathrm{11k}} &amp; \mathbf{a}\_{\mathrm{12k}} &amp; \mathbf{a}\_{\mathrm{13k}} &amp; \cdots\\\ 
+\mathbf{a}\_{\mathrm{21k}} &amp; \mathbf{a}\_{\mathrm{22k}} &amp; \mathbf{a}\_{\mathrm{23k}} &amp; \cdots\\\ 
+\mathbf{a}\_{\mathrm{31k}} &amp; \mathbf{a}\_{\mathrm{32k}} &amp; \mathbf{a}\_{\mathrm{33k}} &amp; \cdots\\\ 
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots 
+\end{bmatrix}=\mathbf{q}\_{\mathrm{k}}
+\begin{bmatrix}
+\mathbf{u}\_{\mathrm{1k}}\mathbf{u}\_{\mathrm{1k}} &amp; \mathbf{u}\_{\mathrm{1k}}\mathbf{u}\_{\mathrm{2k}} &amp; \mathbf{u}\_{\mathrm{1k}}\mathbf{u}\_{\mathrm{3k}} &amp; \cdots\\\ 
+\mathbf{u}\_{\mathrm{2k}}\mathbf{u}\_{\mathrm{1k}} &amp; \mathbf{u}\_{\mathrm{2k}}\mathbf{u}\_{\mathrm{2k}} &amp; \mathbf{u}\_{\mathrm{2k}}\mathbf{u}\_{\mathrm{3k}} &amp; \cdots\\\ 
+\mathbf{u}\_{\mathrm{3k}}\mathbf{u}\_{\mathrm{1k}} &amp; \mathbf{u}\_{\mathrm{3k}}\mathbf{u}\_{\mathrm{2k}} &amp; \mathbf{u}\_{\mathrm{3k}}\mathbf{u}\_{\mathrm{3k}} &amp; \cdots\\\ 
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots 
+\end{bmatrix}
+$$</span><br /></p>
+<p>注意矩阵中用的是多参考点。每一列包含的信息都与系统第k阶模态振型乘以参考自由度相关（同时注意到，根据对称性，每行也包含相同的信息）。这就是为什么许多模态参数估计算法都要使用多参考点数据的原因所在。每一个参考点都包含相同的基本信息：对于某一阶特定的模态，只能通过参考自由度缩放模态振型。因而，可以提取多余的信息，并在曲线拟合中使用。</p>
+<p>更重要的是，如果某一个参考点位置没能有效地激起某一阶特定的模态（比如，参考点紧临那阶模态的节点），那么其他位置的参考点就可能是更合适的参考点，能完全辨别出该阶模态。因此，使用多参考点可最大程度上识别出系统所有的模态，避免了仅使用一个参考点可能存在模态丢失的情况。模态参数估计过程使用加权项，称为模态参与因子，是为了利用所有的参考数据提取到有效的模态参数。因此，使用多参考点数据对确定模态参数有巨大的帮助。使用多参考点，考虑一些参考点的选择，这时每一个参考点可能能确定系统的某几阶模态，但不能完全确定系统所有模态。然而，使用多参考点，通过参考点的组合就能达到充分描述系统所有模态的目的。这样一来，多参考点充分确定系统所有模态的可能性最大。而仅使用一个参考点，就有可能不能完全做到这一点，即使理论上是可能的。</p>
+<p>我希望这些解释有助于明白为什么使用多参考点有很大的帮助，即使它们在理论上不是必要的。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/模态测试/">模态测试</a>, <a href="/tags/多参考点/">多参考点</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-dec-01-tanxiangjun/" class="alignleft prev" title="Dec 01 - 测试装置对模态参数是否有影响">上一篇：Dec 01 - 测试装置对模态参数是否有影响</a>
+ 
+ 
+	<a href="/2014/01/07/modal-sapce/modal-space-feb-01-tanxiangjun/" class="alignright next" title="Feb 01 - 能否用真实工作荷载作为模态测试的激励力">下一篇：Feb 01 - 能否用真实工作荷载作为模态测试的激励力</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

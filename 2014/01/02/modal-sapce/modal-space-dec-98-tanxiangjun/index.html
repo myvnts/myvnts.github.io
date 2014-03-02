@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Dec 98 - 激振器哪种激励方式最好？它们有什么不同? | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Dec 98 - 激振器哪种激励方式最好？它们有什么不同?"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Dec 98 - 激振器哪种激励方式最好？它们有什么不同?</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-dec-98-tanxiangjun/">1月 2 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>激振器哪种激励方式最好？它们有什么不同?</strong> <strong>好……这是个不错的问题。让我们谈谈这些不同的激励技术……</strong></p>
+<p>让我们来讨论现今模态分析最常用的激励技术。激振器有以下几种激振方式：随机、猝发随机、正弦扫频和数字步进正弦。但是在我们讨论这些激励方式之前，有必要先讨论一些基础知识。先将这些激励方式进行分类，并说明何时用何种激励方式。首先，将这些激励技术分成确定性激励和不确定性（或随机）激励。</p>
+<p>确定信号是时域上任何一点都可用确定的数学函数来描述的信号，它们能完全确定。自然界中这类典型的信号为正弦曲线信号，如正弦扫频信号和数字步进正弦信号。另一方面，随机信号不能通过数学函数来描述，但是能从统计学角度描述他们的特性。这类典型的信号为随机信号和猝发随机信号。</p>
+<p>通常，线性系统使用确定信号。也使用确定信号对一个系统作线性检查，检查该系统是否为线性系统。使用随机信号平均由其他因素，如颤振引起的系统轻微非线性。如果结构具有严重的非线性，那么我们应该停止，并思考一个线性的模态分析结果是否有用。但是理解这两类信号之间的不同之处有助于我们决定哪种激励方式将提供最佳的测量。依赖于被测的结构系统，你可能想证明处于测试下的系统为线性系统，或者你可能想线性化系统中存在的任何轻微非线性。</p>
+<a id="more"></a>
+
+<p><img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec98/01.jpg" alt="图1 典型的随机测量序列" /><img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec98/02.jpg" alt="图2 加汉宁窗的随机激励FRF和相干" /></p>
+<p>首先，考虑随机激励，现今广泛用于普通的振动测试。但是对于获得模态测试所需的FRF，认为随机激励方式不是最佳的激励方式之一（尽管随机激励仍然经常使用）。随机信号的随机特性是信号的幅值和相位随采集到的平均值的变化而变化。这样易于平均结构中可能存在的任何轻微非线性。虽然这是有利的一面，但是这类信号从不满足FFT变换的周期性要求，因而，泄漏是个极其严重的问题。甚至施加汉宁窗，相应的FRF仍然存在泄漏，幅值的峰值仍将受到影响。由于泄漏和窗函数的影响，使得结构看起来像是个大阻尼结构。图1所示为一个典型的测量序列，图2为相应于图1的频响函数和相干。注意相干在系统共振处有突变下降尖峰，这是随机激励显著的特征。</p>
+<p>现在考虑猝发随机激励。与随机激励唯一不同之处在于只使用了数据采集中的一部分随机信号，如果采用预触发延迟，那么猝发随机信号在一个采样周期内能完全观测到。因此，猝发随机信号满足FFT变换的周期性要求。这意味着信号不存在泄漏和不需要加窗函数。当然，输入和输出信号两者都要满足这个条件。对于大多数结构而言，这一点是很容易实现的。这类信号适合于平均测量中可能存在的轻微非线性。图3所示为一次典型的这类信号的时域测量。注意到停止激励后，响应信号在采样周期内同时也衰减到零。图4为相应于图3的FRF和相干。注意到与图2相比较，FRF和相干有明显的改善，峰值更陡峭、更清晰，共振峰处的相干也特别好。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec98/03.jpg" alt="图3 典型的猝发随机测量序列" /><p class="caption">图3 典型的猝发随机测量序列</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec98/04.jpg" alt="图4 猝发随机激励的FRF和相干" /><p class="caption">图4 猝发随机激励的FRF和相干</p>
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec98/05.jpg" alt="图5 正弦扫频激励的FRF和相干" /><p class="caption">图5 正弦扫频激励的FRF和相干</p>
+</div>
+<p>正弦扫频激励是在分析仪的一个采样周期内，信号从低频快速扫到高频的一种快速扫频方式。信号重复出现，因而满足FFT变换的周期性要求。这意味着信号不存在泄漏和没必要加窗。当然，信号必须连续，以便获得结构的稳态响应。图5为正弦扫频激励相应的FRF和相干。得到的测量结果类似于猝发随机激励。通过改变作用在系统上的输入力的量级，使用正弦激励技术，可以很容易地对结构进行线性检查。</p>
+<p>最后，数字步进正弦激励技术要求激励信号为单频信号，其频率与分析仪的谱线重合。因为能保证满足FFT变换的周期性要求，所以数字步进正弦信号无泄漏存在，不需要加窗函数。因为它本质上不是带宽激励，因此它是所有激励方式中最慢的，因为每条谱线都需要单独估算。然而，对于证明非线性，它的表现又是卓越的，上面所有讨论的激励方式中，数字步进正弦激励可能产生最优的测量结果。</p>
+<p>比较这些激励技术，发现猝发随机和正弦扫频对于线性系统将产生相似的结果。通常，随机激励总会遭受泄漏的影响，因而测量的质量将会降低。为了说明随机激励测量质量的降低，比较随机激励和猝发随机的测量效果，图6放大了系统的第一个共振峰附近区域。随机信号包含太多的不确定量，并且在共振峰处峰值出现失真（在此处相干有突变下降尖峰）。此处几乎看起来像有两阶模态，但是实际上这是由泄漏失真所引起的。猝发随机测量得到的共振峰清晰且陡峭。显然，猝发随机激励得到的结果优于随机激励得到的结果。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/dec98/06.jpg" alt="图6 猝发随机激励和随机激励得到的FRF比较" /><p class="caption">图6 猝发随机激励和随机激励得到的FRF比较</p>
+</div>
+<p>我们可以花费大量的时间讨论每一种激励技术（还有其他的激励技术没有提到）的所有细节，但是在这没有足够的时间能让我们立刻覆盖每种激励技术的方方面面。可能下次我们会更详细地讨论每一种激励技术。但这次仅是一种快速而简洁的综述，告诉你需要知道哪些东西。如果你对模态分析，还有更多的疑问，请咨询我。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/激振器/">激振器</a>, <a href="/tags/激振方式/">激振方式</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/" class="alignleft prev" title="Aug 98 - 移动力锤和移动加速度计测试有什么不同">上一篇：Aug 98 - 移动力锤和移动加速度计测试有什么不同</a>
+ 
+ 
+	<a href="/2013/12/30/modal-sapce/modal-space-jun-98-tanxiangjun/" class="alignright next" title="Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同">下一篇：Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

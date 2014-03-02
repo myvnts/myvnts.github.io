@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Aug 02 - MIMO测试的优势 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Aug 02 - MIMO测试的优势"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Aug 02 - MIMO测试的优势</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-aug-02-tanxiangjun/">1月 9 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>MIMO测试有些什么现实优势？为什么不只使用SISO，通过移动激振器实现？</strong> <strong>让我们讨论这些不同之处……</strong></p>
+<p>相对于单输入单输出（SISO）数据采集而言，多输入多输出（MIMO）有许多优势。多个激振器的激励能量可以更一致地遍及整个结构，因而能得到更理想的频响函数（FRF）。而仅使用单个激振器，得到的频响函数通常没有由多个激振器得到的好，特别是测试大型结构。使用单个激振器激励，很多时候很难使激励能量充分遍及到整个结构。</p>
+<p>另一个重要因素是激振器设置对被测对象有影响。对于单个激振器测试方式，必须多次调整激振器，以便为多参考点曲线拟合提供必要的多参考数据。很多时候，测试设置对测量的FRF可能有影响。当多参考点数据是由单个激振器激励得到时，这会是个严重的问题。相对于同等的数据由SISO测试采集得到，MIMO测试采集到的数据更一致。</p>
+<a id="more"></a>
+
+<p>为了了解它们的差异，分别对一个结构进行单个激振器激励和多个激振器激励，采集到四组不同的数据：</p>
+<ul>
+<li><p>随机激励和加汉宁窗的SISO</p></li>
+<li><p>猝发随机激励和不加窗的SISO</p></li>
+<li><p>随机激励和加汉宁窗的MIMO</p></li>
+<li><p>猝发随机激励和不加窗的MIMO</p></li>
+</ul>
+<p>四种情况下，在两个激励位置之间采集互易的FRF。为了最小化质量荷载的影响，四种情况下安装在结构上的加速度计保持不动。四种情况下，仅仅是连接和移开激振器（激振器实际上都安装在测量位置，必要时连接和移开，以最小化激振器设置带来的影响）。图1给出了四种情况下的FRF，每个子图都包含两个互易的FRF：Hij和Hji。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug02/01.png" />
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug02/01a.png" alt="图1 比较四种情况下50~100Hz内互易的FRF" /><p class="caption">图1 比较四种情况下50~100Hz内互易的FRF</p>
+</div>
+<p>初看起来，似乎四种情况得到的数据相似，FRF似乎也相当好。然而，对每种激励方式进行仔细检查，易于看出互易的FRF的差异，如图2所示。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug02/02a.png" />
+</div>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug02/02b.png" alt="图2 比较四种情况下53~58Hz内互易的FRF" /><p class="caption">图2 比较四种情况下53~58Hz内互易的FRF</p>
+</div>
+<p>首先，观察图2（a），随机激励和加汉宁窗的SISO测量得到的FRF。注意到两条曲线重叠性差，特别是在第一个共振峰处。同时也注意到即使施加了汉宁窗，随机激励的FRF仍有显著的变迁，这是因为随机激励过程中存在泄漏的影响，虽然施加了汉宁窗，但还是不能彻底消除泄漏造成的影响。FRF峰值移动，直接归因于激振器设置和连接激振器与结构的顶杆刚度的影响。测试设置显然对测量的FRF数据有影响。</p>
+<p>接着观察图2（b），猝发随机激励和不加窗的SISO测量得到的FRF。注意到两条曲线的第一个共振峰重叠性仍然很差。然而，相对于加汉宁窗的随机激励，猝发随机激励提供了更优的测量结果。猝发随机激励通常提供更优的整体测量，因为无须对采集的数据加窗。这是因为测量满足FFT的周期性要求。随机激励通常需要多次平均，以减少测量到的FRF数据的变迁，但其结果仍然没有猝发随机激励得到的结果好。</p>
+<p>然后观察图2（c），随机激励和加汉宁窗的MIMO得到的FRF。相比较前两种情况，此时第一个共振峰重叠性较好。然而，大体上FRF仍有较大的变迁，显著的差异主要存在反共振峰处。因为两个激振器同时安装在结构上，测试过程中激振器安装的影响是相似的。因此，共振峰不受设备安装的影响。</p>
+<p>最后观察图2（d），猝发随机激励和不加窗的MIMO测量得到的FRF。这次的互易FRF几乎完全相同。显然，此种情况的测量是四种情况中最优的。猝发随机MIMO激励具有最佳的整体特征：测量不需要加窗，因为不存在泄漏；互易的FRF具有更优的一致性，因为测试过程中，激振器同时安装在结构上。</p>
+<p>因此，由SISO数据和MIMO数据估计参数时，显然MIMO产生更一致的相关数据。估计共振峰时，SISO测量显然存在差异。另外，相对于加汉宁窗的随机激励，猝发随机激励产生的结果更优。</p>
+<p>图3给出了另一个感兴趣的方面。注意两次SISO测试和MIMO测试都产生了不同的结果，这清楚表明了测试设置对测量FRF有影响。当然，我们意识到FRF的峰值可能受激振器顶杆刚度的影响，但是至少对于MIMO而言，得到的FRF峰值更一致相关（这可能是非常关键的方面，尤其是在使用多参考点模态参数估计技术提取系统振型时）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug02/03.png" alt="图3 SISO和MIMO的FRF比较" /><p class="caption">图3 SISO和MIMO的FRF比较</p>
+</div>
+<p>我希望这个例子有助于说明MIMO测试技术的优势。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/12/modal-sapce/modal-space-feb-03-tanxiangjun/" class="alignleft prev" title="Feb 03 - 校准和模态振型缩放的重要性">上一篇：Feb 03 - 校准和模态振型缩放的重要性</a>
+ 
+ 
+	<a href="/2014/01/09/modal-sapce/modal-space-feb-02-tanxiangjun/" class="alignright next" title="Feb 02 - 模态测试哪种窗最合适">下一篇：Feb 02 - 模态测试哪种窗最合适</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+

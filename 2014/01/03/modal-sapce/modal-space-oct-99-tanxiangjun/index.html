@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="LgihatZFrD" />
+  <meta name="google-site-verification" content="BHwv2BjmWla9OvZuTTl4R8g_hDOiXRIiGycfYXTXTS8" />
+  
+  <title>Oct 99 - Pete不使用窗函数的真正原因 | ahthena</title>
+  <meta name="author" content="ahthena">
+  
+  <meta name="description" content="noise vibration life">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Oct 99 - Pete不使用窗函数的真正原因"/>
+  <meta property="og:site_name" content="ahthena"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="atom.xml" title="ahthena" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  
+  
+</head>
+
+<body>
+  <header id="header"><div id="logo">
+  <h1><a href="/">ahthena</a></h1>
+  <h2><a href="/">live in the moment</a></h2>
+</div>
+
+</header>
+
+  <nav class="inner"><nav id="main-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+    <li> <a href="/atom.xml">RSS</a> </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></nav>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Oct 99 - Pete不使用窗函数的真正原因</h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-02T16:00:00.000Z"><a href="/2014/01/03/modal-sapce/modal-space-oct-99-tanxiangjun/">1月 3 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>我听别人说Pete不使用窗函数，这是为什么呢？</strong></p>
+<p>的确，我不使用窗函数。但是你得让我限定一下那种说法的前提条件。当然，许多数据采集情况都必须加窗函数。但是模态测试过程中几乎任何时刻，都可以选择不需要加窗函数的激励方式。首先让我们明白，为什么一些类型的数据采集在数字化和采样处理过程中会失真，需要怎样做才能将失真减小到最小程度，通过选择特定的测试激励技术，围绕数据采集怎样实现避免加窗。</p>
+<p>我们记得傅立叶变换定义的时域区间是从负无穷到正无穷，但是我们只能在有限的、非常短的时间段内采集数据。只要我们能将采集到的有限时间段内的数据重构到整个时间区间，那么就不存在任何问题。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct99/01.jpg" alt="图1" /><p class="caption">图1</p>
+</div>
+<a id="more"></a>
+
+<p>图1时域波形图中分别为单频正弦波、一段采样时间内的波形纪录和由采样得到的时域信号重构后的波形。图1也给出了采样得到的时域信号的FFT频谱。时域信号变换到频域，得到一条与预期相同的离散谱线。这是因为在采样时间段内刚好捕获了整数倍个周期正弦波，在这种情况下，信号是周期信号，这与采样周期相关。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct99/02.jpg" alt="图2" /><p class="caption">图2</p>
+</div>
+<p>但是如果情况不是这样，结果又将怎样呢？图2给出了这种情况。跟以前一样，图2给出了原始波形、采样得到的波形、重构波形和采样信号的FFT频谱。注意到重构信号波形不连续，但是原始信号明显连续。重构信号的FFT频谱已远远不是如我们所预期的那种单条离散谱线了。由于采样失真，频谱在整个频率带宽内发生了拖尾现象。这是非常严重的误差，称为泄漏，是数字信号处理所遭遇的最严重误差。但是为什么这种误差会出现呢？原始波形为一条单频正弦波，它的频谱怎么会变得如此失真？这个问题很容易解释。这是因为采样得到的信号不是整数倍个周期信号。</p>
+<p>先暂停一下，回想以前学过有关傅立叶级数的一些基本知识。对于一条单频正弦波，我们知道用傅立叶级数描述该信号是非常容易的。通常用傅立叶级数中的一项就可以描述了，形如Asin(wt+q)。但是对于一些信号，比如矩形脉冲信号，其傅立叶级数展开会是什么样的呢？我不想立刻进行傅立叶级数展开，但是我想你应该记得傅立叶级数展开项是一系列不同频率和不同幅值的正弦信号之和。对于矩阵脉冲，傅立叶级数含有很多项，作为该信号的近似，这是因为不连续的矩形脉冲信号不像平滑的正弦信号。</p>
+<p>现在返回到图2所示的采样得到的正弦波，可以看出在采样周期内没有捕捉到整数倍个原始周期正弦波，致使波形发生了畸变，似乎在采样周期的末端波形出现了不连续。这就解释了为什么FFT会在整个频率带宽上发生拖尾现象了。本质上，这需要多个傅立叶展开项去近似已经明显不连续的信号。</p>
+<p>为了将这个误差减小到最小程度（注意我说是的减小，而不是消除），我们需要使用加权函数，也叫窗。加窗主要是为了使信号似乎更好地满足FFT处理所要求的周期性要求。图3为加窗后的时域信号。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct99/03.jpg" alt="图3" /><p class="caption">图3</p>
+</div>
+<p>现今模态测试中，激振器测试最常用是矩形窗，汉宁窗和平顶窗；锤击法测试最常用的是力窗/指数窗。需要明白的是所有窗函数都会使数据发生失真。不详细叙述这些细节，但需要记住的是窗函数总是会使测到的峰值发生失真，并且总会给出这样的假象：测量得到的FRF中的结构的阻尼大于结构实际存在的阻尼，而这两个非常重要的属性刚好是我们需要从FRF中估计的属性。矩形窗会使得幅值失真36%，汉宁窗失真16%。这些窗函数的影响在其频谱图中最易于呈现。所有的窗函数都有特有的形状，这个形状可以确定幅值可能失真的程度、加窗带来的阻尼影响和谱线拖尾效应程度。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct99/04.jpg" alt="图4" /><p class="caption">图4</p>
+</div>
+<p>图4给出了矩形窗、汉宁窗和平顶窗的频谱形式。将来的某一章节我们将会更详细地讨论这些曲线。如果由此你明白了这些窗函数，我将会很高兴，虽然在一些测量情况中，窗函数是一个必然的麻烦。</p>
+<p>所以我四处宣传模态测试，不必加窗。本质上，是设法使信号满足傅立叶变换的要求：“要么采集周期信号，要么采集在一个采样间隔内能完全观测到的信号”。你回想一下，像伪随机、猝发随机、正弦扫频和数字步进正弦信号，这些信号在大多数情况下都满足这个要求，因而不存在泄漏，也就不必加窗。有可能下次我们将详细讨论每个窗函数的细节，但在这儿，这个简短的解释对于此已够用了。</p>
+<p>现在我希望你能理解为什么我不喜欢使用窗函数了。我将不惜任何代价去避免使用窗函数，但是偶尔，我也别无选择。如果你还有模态分析其他方面的问题，请咨询我。</p>
+
+      
+    </div>
+    <footer>
+      
+      
+  
+  <div class="categories">
+    <a href="/categories/modal space (译)/">modal space (译)</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/窗函数/">窗函数</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6758519" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+<div class="clearfix"></div>
+        <nav id="a-pagination">
+ 
+	<a href="/2014/01/03/modal-sapce/modal-space-aug-99-tanxiangjun/" class="alignleft prev" title="Aug 99 - 确定由H矩阵的一行或一列就能得到模态振型？">上一篇：Aug 99 - 确定由H矩阵的一行或一列就能得到模态振型？</a>
+ 
+ 
+	<a href="/2014/01/02/modal-sapce/modal-space-oct-98-tanxiangjun/" class="alignright next" title="Oct 98 - 是否应该总是使用硬锤头做锤击测试，这样力谱在整个频率范围内才平坦吗？">下一篇：Oct 98 - 是否应该总是使用硬锤头做锤击测试，这样力谱在整个频率范围内才平坦吗？</a>
+ 
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.ahthena.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/modal space (译)/">modal space (译)</a><small>37</small></li>
+  
+    <li><a href="/categories/学习资源/">学习资源</a><small>1</small></li>
+  
+    <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/FRF/" style="font-size: 14.00px;">FRF</a><a href="/tags/傅立叶变换/" style="font-size: 10.00px;">傅立叶变换</a><a href="/tags/共振/" style="font-size: 12.00px;">共振</a><a href="/tags/力谱/" style="font-size: 10.00px;">力谱</a><a href="/tags/力锤/" style="font-size: 12.00px;">力锤</a><a href="/tags/加速度计/" style="font-size: 10.00px;">加速度计</a><a href="/tags/固有频率/" style="font-size: 12.00px;">固有频率</a><a href="/tags/多参考点/" style="font-size: 12.00px;">多参考点</a><a href="/tags/学习资源/" style="font-size: 10.00px;">学习资源</a><a href="/tags/拉氏变换/" style="font-size: 10.00px;">拉氏变换</a><a href="/tags/振型/" style="font-size: 16.00px;">振型</a><a href="/tags/曲线拟合/" style="font-size: 12.00px;">曲线拟合</a><a href="/tags/模态/" style="font-size: 18.00px;">模态</a><a href="/tags/模态参数/" style="font-size: 12.00px;">模态参数</a><a href="/tags/模态参数估计/" style="font-size: 10.00px;">模态参数估计</a><a href="/tags/模态测试/" style="font-size: 20.00px;">模态测试</a><a href="/tags/模态空间/" style="font-size: 12.00px;">模态空间</a><a href="/tags/激励/" style="font-size: 10.00px;">激励</a><a href="/tags/激振器/" style="font-size: 12.00px;">激振器</a><a href="/tags/激振方式/" style="font-size: 10.00px;">激振方式</a><a href="/tags/窗函数/" style="font-size: 10.00px;">窗函数</a><a href="/tags/结构动力学修改/" style="font-size: 10.00px;">结构动力学修改</a><a href="/tags/连击/" style="font-size: 10.00px;">连击</a><a href="/tags/锤击法/" style="font-size: 12.00px;">锤击法</a><a href="/tags/锤头/" style="font-size: 10.00px;">锤头</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" ><div>
+  
+  &copy; 2014 ahthena
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/node-pagedown.js"></script>
+
+</body>
+</html>
+
