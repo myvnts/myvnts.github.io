@@ -59,12 +59,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/">Aug 98 - 移动力锤和移动加速度计测试有什么不同</a></h1>
+    <h1 class="title"><a href="/2014/01/02/modal-sapce/modal-space-feb-99-tanxiangjun/">Feb 99 - 各种不同的拟合技术有何意义？</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/">1月 2 2014</a></time>
+        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-feb-99-tanxiangjun/">1月 2 2014</a></time>
 
       
       
@@ -72,12 +72,17 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>移动力锤和移动加速度计测试有什么不同？</strong> <strong>好，那要视情况而定。让我来解释可能的不同之处……</strong></p>
-<p>本质上，模态测试时移动力锤和移动加速度计，二者没有不同之处。倘若采集到相同的数据，这个结论是成立的。让我通过讨论一次表面看似简单，但实际却错综复杂的模态测试来解释它吧。</p>
-<p>我们用两通道分析仪进行一次模态测试，用两通道分析仪进行锤击法测试相当直观。通常力锤在结构上移动，加速度计固定不动。典型的做法是在结构每个测点位置处分别锤击x，y和z方向，得到相对于参考点，即传感器固定点的频响函数。但是当我们用多通道分析仪进行相同的测试时，却需要注意一些细微的差别。考虑对如下图所示的9个测点的结构进行一次锤击法测试。假设测试设备有一个力锤、一个三向加速度计和一个4通道FFT分析仪或者数据采集系统。</p>
+<p><strong>曲线拟合总是令我感到迷惑！各种不同的拟合技术有何意义？</strong> <strong>这有太多的方面需要介绍……</strong></p>
+<p>对于大多数人来说，曲线拟合可能是整个实验模态分析过程中最难的部分。事实上，称它为模态参数估计更适合些。但是那种叫法已被人们所熟知，所以我们还是称它为曲线拟合。实际上，曲线拟合是我们设法从测量得到的数据中提取模态参数（频率、阻尼和模态振型）的过程。首先，让我们讨论少数几个一般项。</p>
+<p>本质上，我们需要用系统的振动模式去描述系统。例如，图1所示的三阶模态系统可以通过下面的频域表达式来描述</p>
 <div class="figure">
-<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug98/01.jpg" />
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb99/001.bmp" />
 </div>
+<p>或者分解成每一阶模态的展开形式：</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb99/002.bmp" />
+</div>
+<p>现在随着开始考虑这些测量，你的头脑中会迅速出现一些疑问：我需要使用多少个数据点？模型存在多少阶模态？曲线拟合频带之外的模态对结果有何影响？对所有模态可以采用相同的拟合技术吗？何时使用SDOF（单自由度）拟合技术，何时使用MDOF（多自由度）拟合技术？应该使用时域还是频域拟合？（在头脑中出现的最重要的事情，可能还是后悔那天我应该去上模态分析课程，而不是去参加聚会）。</p>
 
       
     </div>
@@ -85,7 +90,48 @@
       
         
           <div class="alignleft">
-            <a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2014/01/02/modal-sapce/modal-space-feb-99-tanxiangjun/#more" class="more-link">阅读全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2014/01/02/modal-sapce/modal-space-dec-98-tanxiangjun/">Dec 98 - 激振器哪种激励方式最好？它们有什么不同?</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-dec-98-tanxiangjun/">1月 2 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>激振器哪种激励方式最好？它们有什么不同?</strong> <strong>好……这是个不错的问题。让我们谈谈这些不同的激励技术……</strong></p>
+<p>让我们来讨论现今模态分析最常用的激励技术。激振器有以下几种激振方式：随机、猝发随机、正弦扫频和数字步进正弦。但是在我们讨论这些激励方式之前，有必要先讨论一些基础知识。先将这些激励方式进行分类，并说明何时用何种激励方式。首先，将这些激励技术分成确定性激励和不确定性（或随机）激励。</p>
+<p>确定信号是时域上任何一点都可用确定的数学函数来描述的信号，它们能完全确定。自然界中这类典型的信号为正弦曲线信号，如正弦扫频信号和数字步进正弦信号。另一方面，随机信号不能通过数学函数来描述，但是能从统计学角度描述他们的特性。这类典型的信号为随机信号和猝发随机信号。</p>
+<p>通常，线性系统使用确定信号。也使用确定信号对一个系统作线性检查，检查该系统是否为线性系统。使用随机信号平均由其他因素，如颤振引起的系统轻微非线性。如果结构具有严重的非线性，那么我们应该停止，并思考一个线性的模态分析结果是否有用。但是理解这两类信号之间的不同之处有助于我们决定哪种激励方式将提供最佳的测量。依赖于被测的结构系统，你可能想证明处于测试下的系统为线性系统，或者你可能想线性化系统中存在的任何轻微非线性。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/01/02/modal-sapce/modal-space-dec-98-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -146,12 +192,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/02/modal-sapce/modal-space-oct-98-tanxiangjun/">Oct 98 - 是否应该总是使用硬锤头做锤击测试，这样力谱在整个频率范围内才平坦吗？</a></h1>
+    <h1 class="title"><a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/">Aug 98 - 移动力锤和移动加速度计测试有什么不同</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-oct-98-tanxiangjun/">1月 2 2014</a></time>
+        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/">1月 2 2014</a></time>
 
       
       
@@ -159,13 +205,12 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>是否应该总是使用硬锤头做锤击测试，这样力谱在整个频率范围内才平坦吗？</strong> <strong>好，太硬的锤头可能会引起一些问题……</strong></p>
-<p>进行锤击法测试时，出于某些原因，每个人都认为输入谱（也称为力谱）在整个感兴趣的频率范围内应该平坦，但我们所谓的力谱“平坦”到底意味着什么呢？更应该这样概括：力谱在整个频率范围内应该“相对平坦”，在频谱图上“没有显著地衰减或零值区域”。这到底是什么意思呢。</p>
-<p>基本上，我们希望力谱在整个关心的频率范围内有足够的、分布相当均匀的激励能量。如果力谱完全衰减到零，那么将不能激起结构在那些不关心的频率范围内的响应。我使用词语“相对平坦”是考虑一些工程判断，如哪些测试是可接受的。</p>
-<p>当然，很多时候人们不喜欢工程师们的判断，因此他们确定了专门的准则或极限迫使情况能够可控。有时，特定的准则，比如 “在整个FFT分析频率范围内，力谱衰减量不能超过3dB” ，便被写成了规范。这是非常明确的要求，不允许工程师多想，迫使他们不加思考地按照此规则行事。像这样的准则可能会产生低质量的测试结果，但是如果我们不去思考（或者不允许多加思考），那么可能就会获得不合适的测量。</p>
-<p>现在你询问有关用一个硬锤头进行所有锤击测试的问题，我会马上回答你，但在回答之前，先让我们讨论进行锤击法测试时，有关锤头选择的基本知识。首先，需要记住的是作用在结构上的力谱是力锤/锤头刚度和结构刚度的组合结果。输入功率谱主要受力脉冲作用时间长短控制。作用时间长的脉冲产生较窄的频谱，作用时间短的脉冲产生较宽的频谱。</p>
-<p>让我们看几个例子，从测试角度明白这些意味着什么（在下面所有图中，黑色表示FRF，蓝色表示力谱，红色表示相干）。</p>
-<p>现在用一个非常软的锤头激励结构，关心的频率为800Hz以内。如图1所示，可以看出400Hz以后，力谱（蓝色）已严重衰减。同时注意到400Hz以后，相干（红色）开始严重衰减，FRF（黑色）也不再像400Hz以前那般光顺。出现这个问题在于高频段没有足够的能量激起结构的响应。如果输入能量不够，那么相应的输出也是有限的。这样由输入引起的的输出和FRF，以及相干都是不可接受的。</p>
+<p><strong>移动力锤和移动加速度计测试有什么不同？</strong> <strong>好，那要视情况而定。让我来解释可能的不同之处……</strong></p>
+<p>本质上，模态测试时移动力锤和移动加速度计，二者没有不同之处。倘若采集到相同的数据，这个结论是成立的。让我通过讨论一次表面看似简单，但实际却错综复杂的模态测试来解释它吧。</p>
+<p>我们用两通道分析仪进行一次模态测试，用两通道分析仪进行锤击法测试相当直观。通常力锤在结构上移动，加速度计固定不动。典型的做法是在结构每个测点位置处分别锤击x，y和z方向，得到相对于参考点，即传感器固定点的频响函数。但是当我们用多通道分析仪进行相同的测试时，却需要注意一些细微的差别。考虑对如下图所示的9个测点的结构进行一次锤击法测试。假设测试设备有一个力锤、一个三向加速度计和一个4通道FFT分析仪或者数据采集系统。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug98/01.jpg" />
+</div>
 
       
     </div>
@@ -173,7 +218,7 @@
       
         
           <div class="alignleft">
-            <a href="/2014/01/02/modal-sapce/modal-space-oct-98-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2014/01/02/modal-sapce/modal-space-aug-98-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -190,12 +235,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/02/modal-sapce/modal-space-feb-99-tanxiangjun/">Feb 99 - 各种不同的拟合技术有何意义？</a></h1>
+    <h1 class="title"><a href="/2013/12/30/modal-sapce/modal-space-jun-98-tanxiangjun/">Jun 98 - 用激振器和力锤进行模态测试，二者有什么不同</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-feb-99-tanxiangjun/">1月 2 2014</a></time>
+        <time datetime="2013-12-30T00:00:00.000Z"><a href="/2013/12/30/modal-sapce/modal-space-jun-98-tanxiangjun/">12月 30 2013</a></time>
 
       
       
@@ -203,17 +248,13 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>曲线拟合总是令我感到迷惑！各种不同的拟合技术有何意义？</strong> <strong>这有太多的方面需要介绍……</strong></p>
-<p>对于大多数人来说，曲线拟合可能是整个实验模态分析过程中最难的部分。事实上，称它为模态参数估计更适合些。但是那种叫法已被人们所熟知，所以我们还是称它为曲线拟合。实际上，曲线拟合是我们设法从测量得到的数据中提取模态参数（频率、阻尼和模态振型）的过程。首先，让我们讨论少数几个一般项。</p>
-<p>本质上，我们需要用系统的振动模式去描述系统。例如，图1所示的三阶模态系统可以通过下面的频域表达式来描述</p>
-<div class="figure">
-<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb99/001.bmp" />
-</div>
-<p>或者分解成每一阶模态的展开形式：</p>
-<div class="figure">
-<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb99/002.bmp" />
-</div>
-<p>现在随着开始考虑这些测量，你的头脑中会迅速出现一些疑问：我需要使用多少个数据点？模型存在多少阶模态？曲线拟合频带之外的模态对结果有何影响？对所有模态可以采用相同的拟合技术吗？何时使用SDOF（单自由度）拟合技术，何时使用MDOF（多自由度）拟合技术？应该使用时域还是频域拟合？（在头脑中出现的最重要的事情，可能还是后悔那天我应该去上模态分析课程，而不是去参加聚会）。</p>
+<p><strong>用激振器和力锤进行模态测试，二者有什么不同？</strong></p>
+<p><strong>好，这是个好问题。答案是有同也有异……</strong></p>
+<p>这是另一个会被经常问到的问题。有关这个问题，二者有太多的不同之处，让我们首先从一些基础知识开始，理解为什么用简单的是或者不是都很难回答这个问题。需要用到几个简单的方程帮助解释这个问题。</p>
+<p>首先，我们记得任何系统都可以用它的运动方程进行描述。本质上讲，方程是个简单的力平衡方程：质量×加速度+阻尼×速度+刚度×位移=外力。出于某些理由，这个方程在拉氏域更易于我们进行各种运算。通过拉氏变换，运动方程可以写成</p>
+<p><br /><span class="math">$$
+\begin{bmatrix}\begin{bmatrix}\mathbf{M}\end{bmatrix}\mathbf{s}^{2}+\begin{bmatrix}\mathbf{C}\end{bmatrix}\mathbf{s}+\begin{bmatrix}\mathbf{K}\end{bmatrix}\end{bmatrix}\begin{Bmatrix}\mathbf{X}(\mathbf{s})\end{Bmatrix}=\begin{Bmatrix} \mathbf{F}(\mathbf{s})\end{Bmatrix}\Rightarrow\begin{bmatrix}\mathbf{B(\mathbf{s})}\end{bmatrix}\begin{Bmatrix}\mathbf{X}(\mathbf{s})\end{Bmatrix}=\begin{Bmatrix} \mathbf{F}(\mathbf{s})\end{Bmatrix}
+$$</span><br /></p>
 
       
     </div>
@@ -221,52 +262,7 @@
       
         
           <div class="alignleft">
-            <a href="/2014/01/02/modal-sapce/modal-space-feb-99-tanxiangjun/#more" class="more-link">阅读全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2014/01/02/modal-sapce/modal-space-jun-99-tanxiangjun/">Jun 99 - ODS和模态振型之间的区别？</a></h1>
-  
-
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-02T00:00:00.000Z"><a href="/2014/01/02/modal-sapce/modal-space-jun-99-tanxiangjun/">1月 2 2014</a></time>
-
-      
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>工作变形分析（ODS）和模态振型二者之间有什么不同？有时他们看起来一样。</strong> <strong>好……让我来描述它们之间的差异……</strong></p>
-<p>对大多数人来说，这是一个通常使人迷惑的方面。部分原因是由于我们使用的术语所引起的，我更宁愿称工作状态下得到的数据为工作变形模式，不愿意使用振型（工作变形分析，也称为工作变形振型）一词。但是不幸的是，我不能改变这个名词术语。</p>
-<p>首先，回想一下结构是怎么响应的，通常由激励引起</p>
-<div class="figure">
-<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/jun99/001.jpg" />
-</div>
-<p>当然，我们知道实际施加在结构上的输入力函数是时域形式，但是可以用频域形式来表示。同样，结构的响应实际也是时域的形式，但我们也可以将其表示成频域形式。</p>
-<p>对一个受到任意输入激励的结构，其响应可以通过频响函数乘以输入力函数计算得到，简单示意过程，如图1所示。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/01/02/modal-sapce/modal-space-jun-99-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2013/12/30/modal-sapce/modal-space-jun-98-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -307,7 +303,7 @@
   
     <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
   
-    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
   
   </ul>
 </div>

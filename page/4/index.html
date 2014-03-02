@@ -59,12 +59,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/07/modal-sapce/modal-space-dec-01-tanxiangjun/">Dec 01 - 测试装置对模态参数是否有影响</a></h1>
+    <h1 class="title"><a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/">Apr 01 - 锤击法测试时，指数窗可能会引起问题</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-dec-01-tanxiangjun/">1月 7 2014</a></time>
+        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/">1月 7 2014</a></time>
 
       
       
@@ -72,9 +72,10 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>测试装置对测量的模态数据有影响吗？边界条件和加速度计有影响吗？</strong> <strong>大多数都是有影响的！让我们来探讨这个问题……</strong></p>
-<p>毫无疑问，测试装置和使用的仪器可能对测量数据都有影响。当被测对象为小型轻质的结构，如磁盘驱动器、涡轮叶片、壳体、计算机主板和其他一些小型轻质的结构时，影响尤为突出。</p>
-<p>对于经验丰富的测试工程师而言，可能会明显考虑测试装置和使用仪器对模态测试结果的影响，但是对于测试新手而言，可能不会明显考虑这些事项（最近我看了一篇对一轻质结构进行实验模态测试的报告，报告说进行了许多不同的测试和分析后，揭示了加速度计的质量对结构的固有频率有明显影响。所以，这些明显值得我们进一步讨论）。</p>
+<p><strong>锤击法测试时，使用指数窗会引起怎样的问题？</strong> <strong>让我们讨论它……</strong></p>
+<p>如果指数窗使用不合理，将会引起一些问题。如果需要使用迅速衰减的指数窗（大指数窗）以便最小化泄漏所造成的影响，那么你将会冒着丢失密集模态的风险。这儿有几个实例与指数窗的使用有关，明白如果不反复尝试施加不同大小的指数窗，将会产生什么样的结果。</p>
+<p>首先，我必须明确地指出在许多锤击法测试中，指数窗都是必要的。然而，在加任何窗之前，明智的做法是尝试更换不同的窗去减小泄漏的影响。在使用指数窗之前，总是需要考虑的是，增加谱线的条数或者减半带宽，二者本质上都是增加总的采样时间。这种考虑很有帮助，因为这是考虑让系统响应在采样周期结束之前自然地衰减到零。如果这一点能够实现，那么没必要使用指数窗。</p>
+<p>然而，如果响应在采样周期结束前仍没有衰减到零，那么可能指数窗是必要的。在应用指数窗之前，应先考虑前面提及的两个方法作为最小化泄漏影响的可能方法。在没有考虑时域响应的情况下，就在测试的第一步任意地加指数窗，不推荐这样做。让我们通过一个简单的实例说明这一点。</p>
 
       
     </div>
@@ -82,50 +83,7 @@
       
         
           <div class="alignleft">
-            <a href="/2014/01/07/modal-sapce/modal-space-dec-01-tanxiangjun/#more" class="more-link">阅读全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/">Aug 01 - 锤击法测试注意事项</a></h1>
-  
-
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/">1月 7 2014</a></time>
-
-      
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>锤击法测试哪些事项需要着重考虑？让我们来讨论这个……</strong></p>
-<p>这是个相当不错的问题。最重要的考虑事项可以分解成两大类，一类与锤击有关，一类与响应有关。激励关心的事项比较多，但是在这儿仅讨论以下三项：锤头、触发滞后和二次连击。然而，其他一些事项，比如ADC信号过荷/欠载、量化误差和测试非线性结构的困难程度，以及他关心事项在这都不作讨论。与响应有关的关心事项是信号衰减和使用窗函数，以最小化泄漏。先讨论激励事项，然后再是响应事项。</p>
-<p>首先，锤头对激励频谱负主要责任。通常，锤头越硬，激起的频带越宽。使用的锤头硬度范围通常从最软的橡皮头到最硬的金属头，以及一些中等硬度的锤头，比如软塑料头、硬塑料头、铝头等。每种设计好的锤头，在锤击过程中都有一个确定的弹性变形量。锤头总的作用时间直接与激起的频率范围有关。通常，脉冲作用时间越短，激励的频带越宽（图1为一些典型锤头激励的脉冲与相应的频谱）。</p>
-<div class="figure">
-<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug01/01.png" alt="图1" /><p class="caption">图1</p>
-</div>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -185,12 +143,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/">Apr 01 - 锤击法测试时，指数窗可能会引起问题</a></h1>
+    <h1 class="title"><a href="/2014/01/07/modal-sapce/modal-space-oct-01-tanxiangjun/">Oct 01 - 模态参数估计是否需要使用所有的测量数据</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/">1月 7 2014</a></time>
+        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-oct-01-tanxiangjun/">1月 7 2014</a></time>
 
       
       
@@ -198,10 +156,12 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>锤击法测试时，使用指数窗会引起怎样的问题？</strong> <strong>让我们讨论它……</strong></p>
-<p>如果指数窗使用不合理，将会引起一些问题。如果需要使用迅速衰减的指数窗（大指数窗）以便最小化泄漏所造成的影响，那么你将会冒着丢失密集模态的风险。这儿有几个实例与指数窗的使用有关，明白如果不反复尝试施加不同大小的指数窗，将会产生什么样的结果。</p>
-<p>首先，我必须明确地指出在许多锤击法测试中，指数窗都是必要的。然而，在加任何窗之前，明智的做法是尝试更换不同的窗去减小泄漏的影响。在使用指数窗之前，总是需要考虑的是，增加谱线的条数或者减半带宽，二者本质上都是增加总的采样时间。这种考虑很有帮助，因为这是考虑让系统响应在采样周期结束之前自然地衰减到零。如果这一点能够实现，那么没必要使用指数窗。</p>
-<p>然而，如果响应在采样周期结束前仍没有衰减到零，那么可能指数窗是必要的。在应用指数窗之前，应先考虑前面提及的两个方法作为最小化泄漏影响的可能方法。在没有考虑时域响应的情况下，就在测试的第一步任意地加指数窗，不推荐这样做。让我们通过一个简单的实例说明这一点。</p>
+<p><strong>模态参数估计时，是否需要使用采集到的所有测量数据？</strong> <strong>让我们来讨论这个问题……</strong></p>
+<p>这是个相当不错的问题。倘若测量得到的数据都是高质量和连续相关的数据，没有理由不使用所有采集到的数据。倘若测试时，具有动态范围足够的仪器，灵敏准确的传感器，并且从所有参考点位置和所有响应位置都充分激起了系统所有的模态，那么，所有的数据都能用于模态参数估计。</p>
+<p>但是我上面说的是一句总结性的话，是必要条件，从你脸上的表情就可以看出，所有的测量数据都满足这个要求是极其不可能的。在过去的四分之一个世纪里，我亲自操作的或者与我有关的任何模态测试，从来都没有做到这一点，不光我一个人这样，别人也是如此。我刚才描述的那种测量情况，只有可能出现在分析模型中，并且该分析模型具有无限宽的动态范围和极其高的频率分辨率。从现实角度考虑，现实中这样的情况是不可能出现的。所以，我们讨论现实中的测试情况和一些实际可行的方法，用于将测量中的不足减少到最小程度。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct01/01.png" alt="图1 航空结构的FRF和一些模态振型" /><p class="caption">图1 航空结构的FRF和一些模态振型</p>
+</div>
 
       
     </div>
@@ -209,7 +169,7 @@
       
         
           <div class="alignleft">
-            <a href="/2014/01/07/modal-sapce/modal-space-apr-01-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2014/01/07/modal-sapce/modal-space-oct-01-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -226,12 +186,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/07/modal-sapce/modal-space-feb-01-tanxiangjun/">Feb 01 - 能否用真实工作荷载作为模态测试的激励力</a></h1>
+    <h1 class="title"><a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/">Aug 01 - 锤击法测试注意事项</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-feb-01-tanxiangjun/">1月 7 2014</a></time>
+        <time datetime="2014-01-06T16:00:00.000Z"><a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/">1月 7 2014</a></time>
 
       
       
@@ -239,9 +199,12 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>如果使用真实工作荷载作为模态测试中的激励力，并且该力为随机信号，这样有意义吗？</strong></p>
-<p>回答这个问题不太容易，因为这个问题涉及许多方面，为了全面理解这个答案，我们需要进行讨论。</p>
-<p>使用随机工作激励看起来似乎是个不错的想法，但是通过该激励方式提取得到的模态参数不可能完全与采用传统激励技术得到的模态参数一样好。让我们讨论这个问题，看看工作激励存在哪些不足之处。为了理解这个结论的所有方面，会涉及到模态其他方面的一些问题与答案，这些将有助于使你更明白这个问题。</p>
+<p><strong>锤击法测试哪些事项需要着重考虑？让我们来讨论这个……</strong></p>
+<p>这是个相当不错的问题。最重要的考虑事项可以分解成两大类，一类与锤击有关，一类与响应有关。激励关心的事项比较多，但是在这儿仅讨论以下三项：锤头、触发滞后和二次连击。然而，其他一些事项，比如ADC信号过荷/欠载、量化误差和测试非线性结构的困难程度，以及他关心事项在这都不作讨论。与响应有关的关心事项是信号衰减和使用窗函数，以最小化泄漏。先讨论激励事项，然后再是响应事项。</p>
+<p>首先，锤头对激励频谱负主要责任。通常，锤头越硬，激起的频带越宽。使用的锤头硬度范围通常从最软的橡皮头到最硬的金属头，以及一些中等硬度的锤头，比如软塑料头、硬塑料头、铝头等。每种设计好的锤头，在锤击过程中都有一个确定的弹性变形量。锤头总的作用时间直接与激起的频率范围有关。通常，脉冲作用时间越短，激励的频带越宽（图1为一些典型锤头激励的脉冲与相应的频谱）。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/aug01/01.png" alt="图1" /><p class="caption">图1</p>
+</div>
 
       
     </div>
@@ -249,7 +212,50 @@
       
         
           <div class="alignleft">
-            <a href="/2014/01/07/modal-sapce/modal-space-feb-01-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2014/01/07/modal-sapce/modal-space-aug-01-tanxiangjun/#more" class="more-link">阅读全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2014/01/06/modal-sapce/modal-space-oct-00-tanxiangjun/">Oct 00 - 质量荷载和数据一致性对模态参数估计非常重要</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-05T16:00:00.000Z"><a href="/2014/01/06/modal-sapce/modal-space-oct-00-tanxiangjun/">1月 6 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>为什么质量荷载和数据一致性对模态参数估计如此重要？</strong> <strong>让我来解释为什么……</strong></p>
+<p>这是模态参数估计过程中另一个经常使人们感到迷惑的问题。经常，曲线拟合的结果让人感到迷糊或者似乎结果被扭曲时，通常会指责受噪声或者结构非线性的影响。人们不明白或者不能容易地解释某些问题时，通常他们会发出这样盲目的指责。为此我们着手说明为什么数据一致性很重要和质量荷载将有怎样的影响。</p>
+<p>首先回忆一下用于数据拟合的模型是由线性，对称的方程组组成，方程用全局变量定义系统极点（频率和阻尼），并且假设互易性是内在成立的。现在只要数据满足那个模型，那么一切都正常。但是测试过程和数据采集对结果却有影响。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct00/01.png" alt="图1 分两组进行MIMO测试" /><p class="caption">图1 分两组进行MIMO测试</p>
+</div>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/01/06/modal-sapce/modal-space-oct-00-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -290,7 +296,7 @@
   
     <li><a href="/categories/读书笔记/">读书笔记</a><small>1</small></li>
   
-    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
   
   </ul>
 </div>
