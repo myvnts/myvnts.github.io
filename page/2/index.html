@@ -59,12 +59,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/12/modal-sapce/modal-space-oct-03-tanxiangjun/">Oct 03 - 诠释FRF</a></h1>
+    <h1 class="title"><a href="/2014/01/12/modal-sapce/modal-space-jun-03-tanxiangjun/">Jun 03 - 辨别伪重根必须用多个参考点吗</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-11T16:00:00.000Z"><a href="/2014/01/12/modal-sapce/modal-space-oct-03-tanxiangjun/">1月 12 2014</a></time>
+        <time datetime="2014-01-11T16:00:00.000Z"><a href="/2014/01/12/modal-sapce/modal-space-jun-03-tanxiangjun/">1月 12 2014</a></time>
 
       
       
@@ -72,12 +72,9 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>为什么一些FRF存在反共振峰，而其他的又不存在？</strong> <strong>让我们来探讨一下…… </strong></p>
-<p>这是个不错的问题，你说的完全正确，一些FRF存在反共振峰，而其他的又不存在。但是为什么会出现这样的现象呢？让我们首先讨论一个特定的测量，称为驱动点（也称为原点）测量的一些属性，然后扩展这个讨论，解释在怎样的条件下，反共振峰会出现在FRF中。</p>
-<p>首先解释一下驱动点测量。驱动点测量是指输入力和输出响应在同一点、同一个方向进行的频响函数测量。典型的驱动点测量如图1所示。</p>
-<div class="figure">
-<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/oct03/01.png" alt="图1 驱动点FRF（幅值、相位、实部和虚部" /><p class="caption">图1 驱动点FRF（幅值、相位、实部和虚部</p>
-</div>
+<p><strong>有人告诉我，辨别伪重根必须有多个参考点。</strong> <strong>让我们来探讨一下…… </strong></p>
+<p>首先，我想说的是，重根在大多数测试结构中还是很少见的。但是最近，我碰到了多个测试，都涉及到“伪重根”。伪重根模态是指在测量数据的一个频率分辨率内存在两个或多个频率。因此，频响函数中观察到的峰值是由两阶或多阶模态之和组成的。</p>
+<p>为了像单个频率峰值一样明确区分这些伪重根峰值，需要更高的频率分辨率。当然，这并不一定切实可行。很多时候，为了获得高的频率分辨率，要求获得相当长时间的数据块，但这并不容易做到。但是如果频率分辨率不足，会出现什么情况呢？通常，大多数人会认为，如果存在重根，那么必须使用多参考点，否则重根是不能被提取到的。这是个非常强硬的观点，但是我并不同意。模态参数估计算法（曲线拟合）功能强大，提取伪重根（将给两个实例）时，没有理由认为该算法不完善，存在缺陷。这些情况下，事实上没有必要总是考虑多参考点。</p>
 
       
     </div>
@@ -85,7 +82,7 @@
       
         
           <div class="alignleft">
-            <a href="/2014/01/12/modal-sapce/modal-space-oct-03-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2014/01/12/modal-sapce/modal-space-jun-03-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -102,12 +99,12 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/01/12/modal-sapce/modal-space-dec-03-tanxiangjun/">Dec 03 - 局部拟合和整体拟合有何不同之处</a></h1>
+    <h1 class="title"><a href="/2014/01/12/modal-sapce/modal-space-aug-03-tanxiangjun/">Aug 03 - 只测试结构的一部分将会引起怎样的问题</a></h1>
   
 
       
         <div class="icon"></div>
-        <time datetime="2014-01-11T16:00:00.000Z"><a href="/2014/01/12/modal-sapce/modal-space-dec-03-tanxiangjun/">1月 12 2014</a></time>
+        <time datetime="2014-01-11T16:00:00.000Z"><a href="/2014/01/12/modal-sapce/modal-space-aug-03-tanxiangjun/">1月 12 2014</a></time>
 
       
       
@@ -115,11 +112,9 @@
     <div class="entry">
       
         <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>局部拟合和整体拟合有何不同之处？</strong> <strong>让我们来探讨一下……</strong></p>
-<p>这是个相当不错的问题，为了说明这个问题，需要涉及到少数几个核心方程和一个简单实例，用于说明它们之间的区别。让我们回想一下频响函数</p>
-<p><br /><span class="math">$$
-\mathbf{h\_{ij}}(\mathbf{j\omega)}\sum\_{k=1}^{m}\left ( \mathbf{\frac{a\_{ijk}}{j\omega\_k -p\_{k}}} +\mathbf{\frac{a^\*\_{ijk}}{j\omega\_k -p^\* \_{k}}}\right )
-$$</span><br /></p>
+<p><strong>对结构的部分关心部位做模态测试，发现许多振型看起来相同。我做错了什么吗？</strong> <strong>让我们来探讨一下……</strong></p>
+<p>这是实验模态测试过程中经常会遇到的另一个普遍性问题。很多时候，你个人或你公司只关心结构的一部分或者系统的部分组成部件。因此，你只集中专注整个结构的那一部分，因为这个区域才是你负责的或关心的区域。这似乎是合理的，特别是你不想测试整个系统时（呵呵，如果生活就是这么简单和容易，该多好呀！）。</p>
+<p>不幸的是，很多时候这样测试的结果可能不可靠。在系统不同组件之间或者不同部位之间，经常存在显著的动力耦合，不可能只测试你关心的那部分结构就总能满足要求。当然，你确实可以只测量关心的那部分结构，但是很多时候，系统的不同组件或子系统之间存在着显著的相互作用。如果实验模态测试只采集结构关心部分的数据，那么得出的模态振型会让让人感到迷惑，因为整个结构的模态振型是未知的。这如同把结构的其他部分遮盖起来，只让你看关心的那部分一样，这样会使用户相当迷惑，不确定到底看到了什么。很多时候人们对这类测试的评论是：两个第一阶弯曲模态或者两个第一阶扭转模态，等等。显然这是完全不可能的！系统不可能存在两个第一阶模态。但是从你的限制条件看，只测试结构的一部分，确实出现了好像两阶相似的模态。</p>
 
       
     </div>
@@ -127,7 +122,7 @@ $$</span><br /></p>
       
         
           <div class="alignleft">
-            <a href="/2014/01/12/modal-sapce/modal-space-dec-03-tanxiangjun/#more" class="more-link">阅读全文</a>
+            <a href="/2014/01/12/modal-sapce/modal-space-aug-03-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
@@ -184,6 +179,49 @@ $$</span><br /></p>
     <header>
       
   
+    <h1 class="title"><a href="/2014/01/09/modal-sapce/modal-space-feb-02-tanxiangjun/">Feb 02 - 模态测试哪种窗最合适</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-feb-02-tanxiangjun/">1月 9 2014</a></time>
+
+      
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
+<p><strong>对于不同类型的模态测试，哪种窗函数最合适？让我们来探讨一下……</strong></p>
+<p>这是个相当不错的问题，让我们回顾一下一些经常使用的激励技术和相关的窗函数。事实上，FFT变换包含一些限制条件，这是必须首先考虑的。这些条件有助于我们明白为什么要使用某种类型的激励技术和哪种形式的窗函数最合适。</p>
+<p>首先应记得傅立叶变换定义的时间区间为-∞到+∞。只要测量到整个瞬态信号或者捕捉到周期信号，那么FFT变换的要求是满足的。如果不满足FFT变换的要求，那么会引起严重的信号处理问题，称为泄漏。窗函数是加权函数，用于最小化泄漏造成的影响，但不能完全消除泄漏。因此有必要强调说明一下这个真实存在的问题。基于这些事实，让我们讨论实验模态测试不同类型的激励信号，并说明为这些激励信号所施加的典型窗函数。</p>
+<div class="figure">
+<img src="http://picture.52bf96bc3ba35.d01.nanoyun.com/modal-space/feb02/01.png" alt="图1 锤击激励和响应" /><p class="caption">图1 锤击激励和响应</p>
+</div>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/01/09/modal-sapce/modal-space-feb-02-tanxiangjun/#more" class="more-link">阅读全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2014/01/09/modal-sapce/modal-space-dec-02-tanxiangjun/">Dec 02 - 模态测试采集平均FRF vs 采集时域数据</a></h1>
   
 
@@ -208,46 +246,6 @@ $$</span><br /></p>
         
           <div class="alignleft">
             <a href="/2014/01/09/modal-sapce/modal-space-dec-02-tanxiangjun/#more" class="more-link">阅读全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2014/01/09/modal-sapce/modal-space-oct-02-tanxiangjun/">Oct 02 - 模态测试容易犯的主要错误</a></h1>
-  
-
-      
-        <div class="icon"></div>
-        <time datetime="2014-01-08T16:00:00.000Z"><a href="/2014/01/09/modal-sapce/modal-space-oct-02-tanxiangjun/">1月 9 2014</a></time>
-
-      
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="peter-avitabile-著-翻译谭祥军">Peter Avitabile 著 翻译：谭祥军</h3>
-<p><strong>模态测试容易犯的主要错误是什么，这样我就可以避免犯同样的错误了？</strong> <strong>让我们来探讨一下……</strong></p>
-<p>在模态测试和分析过程中，人们经常犯一些严重的错误，多年来我见到许多这样的例子。一些错误相当有趣，一些又非常严重。因此让我们来探讨一些我称之为“模态测试趣闻”的错误。在过去几十年的模态测试中，我已碰到过很多这样的“趣闻”。</p>
-<p>锤击法测试和相干：多年前（刚好几个月前又碰到），我见到模态测试工程师仅仅对每个测量位置平均一次（也就是每个测点仅锤击一次）。当问他为什么这样做时，他非常肯定的回答说，既然相干为1，为什么还要不厌其烦地进行多次锤击测量，锤击一次得到的相干多好呀！我见过很多人中过这个圈套。相干是一个只能通过多次平均测量估算的函数，只进行一次平均（锤击），相对于进行的测量而言相干函数没有任何变化，因此，相干函数值总是1。这样明显不能成为测量是可接受的标识。你只能使用相干函数去估算一组平均后的数据的变化。多次平均是必须的。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/01/09/modal-sapce/modal-space-oct-02-tanxiangjun/#more" class="more-link">阅读全文</a>
           </div>
         
         
